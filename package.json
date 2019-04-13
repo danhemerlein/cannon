@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "contentful": "^7.5.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
@@ -23,5 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "basement": "https://github.com/sanctuarycomputer/basement.git"
+  }
 }
