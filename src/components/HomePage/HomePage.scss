@@ -31,7 +31,7 @@
     &--container{
       &:hover{
         .HomePage__svg-container{
-          transition: transform $transition-duration-mid cubic-bezier(0.25, 0.2, 0, 1), opacity $transition-duration-short cubic-bezier(0.25, 0.2, 0, 1);
+          transition: transform $transition-duration-extra-long ease-in, opacity $transition-duration-short cubic-bezier(0.25, 0.2, 0, 1);
           opacity: 1;
         }
       }
@@ -45,6 +45,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    margin: 0;
+    padding: 0;
+
+    svg{
+      display: inline-block;
+    }
 
   }
 

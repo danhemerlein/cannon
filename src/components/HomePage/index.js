@@ -25,11 +25,12 @@ export default class HomePage extends Component {
       
       for (let child of children) {
 
-        const x = getRandomInt(-600, 600);
-        const y = getRandomInt(-600, 600);
-        const deg = getRandomInt(-100, 100);
+        let x = getRandomInt(-600, 600);
+        let y = getRandomInt(-600, 600);
+        let deg = getRandomInt(-100, 100);
 
         child.style.transform = `translateY(${x}%) translateX(${y}%) rotate(${deg}deg)`;
+
       }
     }
     
@@ -55,26 +56,37 @@ export default class HomePage extends Component {
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
             >WATER GLASS
-
-              <div id="glass-1" className={cx("HomePage__svg-container absolute")}>
-                <WaterGlass></WaterGlass>
+  
+              <div className={cx("inline-block")}>
+                <div className={cx("HomePage__svg-container absolute")}>
+                  <WaterGlass></WaterGlass>
+                </div>
+              </div>
+  
+              <div className={cx("inline-block")}>
+                <div className={cx("HomePage__svg-container absolute")}>
+                  <WaterGlass></WaterGlass>
+                </div>
               </div>
 
-              <div id="glass-2" className={cx("HomePage__svg-container absolute")}>
-                <WaterGlass></WaterGlass>
+              <div className={cx("inline-block")}>
+                <div className={cx("HomePage__svg-container absolute")}>
+                  <WaterGlass></WaterGlass>
+                </div>
+              </div>
+              
+              <div className={cx("inline-block")}>
+                <div className={cx("HomePage__svg-container absolute")}>
+                  <WaterGlass></WaterGlass>
+                </div>
               </div>
 
-              <div id="glass-3" className={cx("HomePage__svg-container absolute")}>
-                <WaterGlass></WaterGlass>
+              <div className={cx("inline-block")}>
+                <div className={cx("HomePage__svg-container absolute")}>
+                  <WaterGlass></WaterGlass>
+                </div>
               </div>
 
-              <div id="glass-4" className={cx("HomePage__svg-container absolute")}>
-                <WaterGlass></WaterGlass>
-              </div>
-
-              <div id="glass-5" className={cx("HomePage__svg-container absolute")}>
-                <WaterGlass></WaterGlass>
-              </div>   
             </h3>
             <h6 className={cx("text-center headline-serif color-burnt-yellow bold")}>out now</h6>
           </div>
