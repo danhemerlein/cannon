@@ -31,19 +31,21 @@
     &--container{
       &:hover{
         .HomePage__svg-container{
-          display: block;
+          transition: transform $transition-duration-mid cubic-bezier(0.25, 0.2, 0, 1), opacity $transition-duration-short cubic-bezier(0.25, 0.2, 0, 1);
+          opacity: 1;
         }
       }
     }
   }
 
   &__svg-container {
-    height: 25%;
-    width: 25%;
-    top: -50%;
+    height: 15%;
+    width: 15%;
+    top: -25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    opacity: 0;
+
   }
 
   &__footer-nav {

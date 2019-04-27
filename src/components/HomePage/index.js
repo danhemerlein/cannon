@@ -7,6 +7,40 @@ import WaterGlass from "components/Icons/WaterGlass";
 
 export default class HomePage extends Component {
 
+    constructor(props) {
+      super(props)    
+      this.glass1 = React.createRef();
+
+      this.state = {
+        
+      }
+    }
+
+    mouseEnter() {
+      const children = document.querySelectorAll('.HomePage__svg-container'); 
+      
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      for (let child of children) {
+
+        const x = getRandomInt(-600, 600);
+        const y = getRandomInt(-600, 600);
+        const deg = getRandomInt(-100, 100);
+
+        child.style.transform = `translateY(${x}%) translateX(${y}%) rotate(${deg}deg)`;
+      }
+    }
+    
+    mouseLeave() {      
+      const children = document.querySelectorAll('.HomePage__svg-container'); 
+
+      for (let child of children) {
+        child.style.transform = `translateY(-50%) translateX(-50%)`;
+      }
+    }
+
     render() {
     return (
       <div className={cx("HomePage overflow-hidden w100 vh100")}>
@@ -16,29 +50,33 @@ export default class HomePage extends Component {
             <h1 className={cx("HomePage__headline-one text-center headline-serif color-burnt-yellow bold")}>CANNON</h1>
           </div>
 
-          <div className={cx("HomePage__headline-three--container relative")}>
-            <h3 className={cx("HomePage__headline-three text-center headline-serif color-burnt-yellow bold")}>WATER GLASS</h3>
+          <div className={cx("HomePage__headline-three--container ")}>
+            <h3 className={cx("HomePage__headline-three text-center headline-serif color-burnt-yellow bold relative")}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave}
+            >WATER GLASS
 
-            <div id="glass-1" className={cx("HomePage__svg-container absolute")}>
-              <WaterGlass></WaterGlass>
-            </div>
+              <div id="glass-1" className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
 
-            <div id="glass-2" className={cx("HomePage__svg-container absolute")}>
-              <WaterGlass></WaterGlass>
-            </div>
+              <div id="glass-2" className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
 
-            <div id="glass-3" className={cx("HomePage__svg-container absolute")}>
-              <WaterGlass></WaterGlass>
-            </div>
+              <div id="glass-3" className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
 
-            <div id="glass-4" className={cx("HomePage__svg-container absolute")}>
-              <WaterGlass></WaterGlass>
-            </div>
+              <div id="glass-4" className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
 
-            <div id="glass-5" className={cx("HomePage__svg-container absolute")}>
-              <WaterGlass></WaterGlass>
-            </div>
-            
+              <div id="glass-5" className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>   
+            </h3>
+            <h6 className={cx("text-center headline-serif color-burnt-yellow bold")}>out now</h6>
           </div>
 
           <div></div>
