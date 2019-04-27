@@ -1,3 +1,72 @@
-.HomePage {
+@import "../../styles/app.scss";
 
+.HomePage {
+  -webkit-animation: fadein $transition-duration-short;
+  -moz-animation: fadein $transition-duration-short;
+  -ms-animation: fadein $transition-duration-short;
+  -o-animation: fadein $transition-duration-short;
+  animation: fadein $transition-duration-short;
+
+  &__headline-one {
+    font-size: 4rem;
+    cursor: default;
+
+    -webkit-animation: fadein $transition-duration-med;
+    -moz-animation: fadein $transition-duration-med;
+    -ms-animation: fadein $transition-duration-med;
+    -o-animation: fadein $transition-duration-med;
+    animation: fadein $transition-duration-med;
+  }
+  
+  &__headline-three {
+    font-size: 2rem;
+    cursor: default;
+
+    -webkit-animation: fadein $transition-duration-med;
+    -moz-animation: fadein $transition-duration-med;
+    -ms-animation: fadein $transition-duration-med;
+    -o-animation: fadein $transition-duration-med;
+    animation: fadein $transition-duration-med;
+
+    &--container{
+      &:hover{
+        .HomePage__svg-container{
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__svg-container {
+    height: 25%;
+    width: 25%;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  &__footer-nav {
+    
+    -webkit-animation: fadein $transition-duration-med;
+    -moz-animation: fadein $transition-duration-med;
+    -ms-animation: fadein $transition-duration-med;
+    -o-animation: fadein $transition-duration-med;
+    animation: fadein $transition-duration-med;
+
+    &--list-item {
+
+      a {
+        text-decoration: none;
+      }
+
+      a:active {
+        color: map-get($colors, "burnt-yellow");
+      }
+      
+      a:visited {
+        color: map-get($colors, "burnt-yellow");
+      }
+    }
+  }
 }
