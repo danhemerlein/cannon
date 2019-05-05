@@ -56,35 +56,25 @@ export default class HomePage extends Component {
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
             >WATER GLASS
-  
-              <div className={cx("inline-block")}>
-                <div className={cx("HomePage__svg-container absolute")}>
-                  <WaterGlass></WaterGlass>
-                </div>
-              </div>
-  
-              <div className={cx("inline-block")}>
-                <div className={cx("HomePage__svg-container absolute")}>
-                  <WaterGlass></WaterGlass>
-                </div>
+
+              <div className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
               </div>
 
-              <div className={cx("inline-block")}>
-                <div className={cx("HomePage__svg-container absolute")}>
-                  <WaterGlass></WaterGlass>
-                </div>
-              </div>
-              
-              <div className={cx("inline-block")}>
-                <div className={cx("HomePage__svg-container absolute")}>
-                  <WaterGlass></WaterGlass>
-                </div>
+              <div className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
               </div>
 
-              <div className={cx("inline-block")}>
-                <div className={cx("HomePage__svg-container absolute")}>
-                  <WaterGlass></WaterGlass>
-                </div>
+              <div className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
+            
+              <div className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
+              </div>
+
+              <div className={cx("HomePage__svg-container absolute")}>
+                <WaterGlass></WaterGlass>
               </div>
 
             </h3>
@@ -95,16 +85,16 @@ export default class HomePage extends Component {
 
           <div>
             <ul className={cx("HomePage__footer-nav mb2")}>
-              <li className={cx("HomePage__footer-nav--list-item mx1 color-burnt-yellow inline-block")}>
-                <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer">LISTEN</a>
+              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
+                <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer"><i class="fas fa-volume-up"></i></a>
               </li>
 
-              <li className={cx("HomePage__footer-nav--list-item mx1 color-burnt-yellow inline-block")}>
-                <a href="https://www.instagram.com/cannonfew/" target="_blank" rel="noopener noreferrer">INSTA</a>
+              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
+                <a href="https://www.instagram.com/cannonfew/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
               </li>
 
-              <li className={cx("HomePage__footer-nav--list-item mx1 color-burnt-yellow inline-block")}>
-                <a href="https://twitter.com/cannon_few" target="_blank" rel="noopener noreferrer">TWITTER</a>
+              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
+                <a href="https://twitter.com/cannon_few" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
               </li>
             </ul>
           </div>
