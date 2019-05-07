@@ -1,20 +1,13 @@
 import React, { Component } from "react";
 
+import debounce from "utils/debounce";
+
 import './HomePage.scss'
 import cx from 'classnames';
 
 import WaterGlass from "components/Icons/WaterGlass";
 
 export default class HomePage extends Component {
-
-    constructor(props) {
-      super(props)    
-      this.glass1 = React.createRef();
-
-      this.state = {
-        
-      }
-    }
 
     mouseEnter() {
       const children = document.querySelectorAll('.HomePage__svg-container'); 
@@ -42,9 +35,30 @@ export default class HomePage extends Component {
       }
     }
 
+    setHeight = () => {
+      const homePage = document.querySelector('.HomePage');
+
+      const hpHeight = (window.innerHeight - 1);
+
+      homePage.style.height = hpHeight + "px";
+    }
+
+    debounceAPHeight = () => {
+      debounce(this.setHeight(), 100);
+    }
+
+    componentDidMount() {
+      this.setHeight();
+
+      window.addEventListener("resize", () => {
+        this.setHeight();
+      });
+    }
+    
+
     render() {
     return (
-      <div className={cx("HomePage overflow-hidden w100 vh100")}>
+      <div className={cx("HomePage overflow-hidden w100")}>
         <div style={{ backgroundImage: "url('/assets/cannon.jpg')" }} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center  justify-between flex-col relative")}>
         
           <div className={cx("mt2 relative")}>
