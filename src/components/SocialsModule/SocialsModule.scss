@@ -1,0 +1,60 @@
+@import "../../styles/app.scss";
+
+.SocialsModule {
+
+    &__nav {
+    
+    -webkit-animation: fadein $transition-duration-med;
+    -moz-animation: fadein $transition-duration-med;
+    -ms-animation: fadein $transition-duration-med;
+    -o-animation: fadein $transition-duration-med;
+    animation: fadein $transition-duration-med;
+
+    &--list-item {
+
+      transform: scale(0.85);
+      transition: transform $transition-duration-ultra-short linear;
+
+      a {
+        text-decoration: none;
+        font-size: 1.75rem;
+        color: map-get($colors, "burnt-yellow");
+      }
+
+      a:active {
+        color: map-get($colors, "burnt-yellow");
+      }
+      
+      a:visited {
+        color: map-get($colors, "burnt-yellow");
+      }
+
+      @media ($medium-up) {
+        &:hover {
+          transform: scale(1);
+
+          .SocialsModule__nav--list-item-cta {
+            width: 125%;
+            visibility: visible;
+            -webkit-animation: fadein $transition-duration-ultra-short;
+            -moz-animation: fadein $transition-duration-ultra-short;
+            -ms-animation: fadein $transition-duration-ultra-short;
+            -o-animation: fadein $transition-duration-ultra-short;
+            animation: fadein $transition-duration-ultra-short;
+            animation-timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+
+    &--list-item-cta {
+      top: 50%;
+      right: 75%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: width $transition-duration-ultra-short linear;
+      visibility: hidden;
+      width: 0;
+      font-size: 0.75rem;
+    }
+  }
+}

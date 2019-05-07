@@ -49,36 +49,43 @@
     opacity: 0;
   }
 
-  &__footer-nav {
+  // &__footer-nav {
     
-    -webkit-animation: fadein $transition-duration-med;
-    -moz-animation: fadein $transition-duration-med;
-    -ms-animation: fadein $transition-duration-med;
-    -o-animation: fadein $transition-duration-med;
-    animation: fadein $transition-duration-med;
+  //   -webkit-animation: fadein $transition-duration-med;
+  //   -moz-animation: fadein $transition-duration-med;
+  //   -ms-animation: fadein $transition-duration-med;
+  //   -o-animation: fadein $transition-duration-med;
+  //   animation: fadein $transition-duration-med;
 
-    &--list-item {
+  //   &--list-item {
 
-      transform: translateY(0);
-      transition: transform $transition-duration-sorta-short linear;
+  //     transform: translateY(0);
+  //     transition: transform $transition-duration-sorta-short linear;
 
-      a {
-        text-decoration: none;
-        font-size: 1.75rem;
-        color: map-get($colors, "burnt-yellow");
-      }
+  //     a {
+  //       text-decoration: none;
+  //       font-size: 1.75rem;
+  //       color: map-get($colors, "burnt-yellow");
+  //     }
 
-      a:active {
-        color: map-get($colors, "burnt-yellow");
-      }
+  //     a:active {
+  //       color: map-get($colors, "burnt-yellow");
+  //     }
       
-      a:visited {
-        color: map-get($colors, "burnt-yellow");
-      }
+  //     a:visited {
+  //       color: map-get($colors, "burnt-yellow");
+  //     }
 
-      &:hover{
-        transform: translateY(-15%);
-      }
-    }
+  //     &:hover{
+  //       transform: translateY(-15%);
+  //     }
+  //   }
+  // }
+
+  &__social-container {
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 100px;
   }
 }
