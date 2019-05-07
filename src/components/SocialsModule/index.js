@@ -12,18 +12,18 @@ export default class SocialsModule extends Component {
         <div>
           <ul className={cx("SocialsModule__nav")}>
             <li className={cx("SocialsModule__nav--list-item mb1 relative flex")}>
-              <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer"><i class="fas fa-volume-up"></i></a>
-              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>songs?</span>
+              <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer"><i className="fas fa-volume-up"></i></a>
+              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>{this.props.soundLinkCTA}</span>
             </li>
 
             <li className={cx("SocialsModule__nav--list-item mt1 relative flex")}>
-              <a href="https://www.instagram.com/cannonfew/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>photos</span>
+              <a href="https://www.instagram.com/cannonfew/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>{this.props.instagramLinkCTA}</span>
             </li>
 
             <li className={cx("SocialsModule__nav--list-item mt1 relative flex")}>
-              <a href="https://twitter.com/cannon_few" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>thoughts</span>
+              <a href="https://twitter.com/cannon_few" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+              <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-burnt-yellow")}>{this.props.twitterLinkCTA}</span>
             </li>
           </ul>
         </div>

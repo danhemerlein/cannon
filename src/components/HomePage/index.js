@@ -29,21 +29,23 @@ export default class HomePage extends Component {
       });
     }
     
-
     render() {
+      const backgroundImage = {
+        backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
+      };
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
-        <div style={{ backgroundImage: "url('/assets/cannon.jpg')" }} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center  justify-between flex-col relative")}>
+        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center  justify-between flex-col relative")}>
         
           <div className={cx("mt2 relative")}>
-            <h1 className={cx("HomePage__headline-one text-center headline-serif color-burnt-yellow bold")}>CANNON</h1>
+            <h1 className={cx("HomePage__headline-one text-center headline-serif color-burnt-yellow bold")}>{this.props.mainTitle}</h1>
           </div>
 
           <div className={cx("HomePage__headline-three--container mb2")}>
             <h3 className={cx("HomePage__headline-three text-center headline-serif color-burnt-yellow bold relative")}
-            >WATER GLASS
+            >{this.props.footerTitle}
             </h3>
-            <h6 className={cx("text-center headline-serif color-burnt-yellow bold")}>out now</h6>
+            <h6 className={cx("text-center headline-serif color-burnt-yellow bold")}>{this.props.footerSubTitle}</h6>
           </div>
 
           {/* <div></div>
@@ -68,7 +70,11 @@ export default class HomePage extends Component {
 
           <div className={cx("HomePage__social-container self-end absolute")}>
 
-            <SocialsModule />
+            <SocialsModule 
+              soundLinkCTA={this.props.soundLinkCTA}
+              instagramLinkCTA={this.props.instagramLinkCTA}
+              twitterLinkCTA={this.props.twite}
+            />
 
           </div>
 
