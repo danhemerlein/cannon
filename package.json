@@ -2,7 +2,7 @@
   "name": "cannon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/danhemerlein/cannon",
+  "homepage": "https://danhemerlein.github.io/cannon/",
   "dependencies": {
     "classnames": "^2.2.6",
     "contentful": "^7.5.0",
