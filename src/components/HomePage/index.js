@@ -73,7 +73,7 @@ export default class HomePage extends Component {
             <SocialsModule 
               soundLinkCTA={this.props.soundLinkCTA}
               instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twite}
+              twitterLinkCTA={this.props.twitterLinkCTA}
             />
 
           </div>
