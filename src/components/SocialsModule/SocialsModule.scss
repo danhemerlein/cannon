@@ -17,16 +17,16 @@
 
       a {
         text-decoration: none;
-        font-size: 1.75rem;
-        color: map-get($colors, "burnt-yellow");
+        font-size: 2.5rem;
+        color: map-get($colors, "black");
       }
 
       a:active {
-        color: map-get($colors, "burnt-yellow");
+        color: map-get($colors, "black");
       }
       
       a:visited {
-        color: map-get($colors, "burnt-yellow");
+        color: map-get($colors, "black");
       }
 
       @media ($medium-up) {
@@ -54,7 +54,7 @@
       transition: width $transition-duration-ultra-short linear;
       visibility: hidden;
       width: 0;
-      font-size: 0.75rem;
+      font-size: 1.25rem;
     }
   }
 }

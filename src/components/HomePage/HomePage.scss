@@ -12,7 +12,6 @@
   &__headline-one {
     font-size: 4rem;
     cursor: default;
-
     -webkit-animation: fadein $transition-duration-med;
     -moz-animation: fadein $transition-duration-med;
     -ms-animation: fadein $transition-duration-med;
@@ -23,21 +22,16 @@
   &__headline-three {
     font-size: 2rem;
     cursor: default;
-
     -webkit-animation: fadein $transition-duration-med;
     -moz-animation: fadein $transition-duration-med;
     -ms-animation: fadein $transition-duration-med;
     -o-animation: fadein $transition-duration-med;
     animation: fadein $transition-duration-med;
+  }
 
-    &--container{
-      &:hover{
-        .HomePage__svg-container{
-          // transition: transform $transition-duration-long ease-in, opacity $transition-duration-short cubic-bezier(0.25, 0.2, 0, 1);
-          // opacity: 1;
-        }
-      }
-    }
+  &__site-link {
+    top: 2rem;
+    right: 2rem;
   }
 
   &__svg-container {
@@ -49,43 +43,10 @@
     opacity: 0;
   }
 
-  // &__footer-nav {
-    
-  //   -webkit-animation: fadein $transition-duration-med;
-  //   -moz-animation: fadein $transition-duration-med;
-  //   -ms-animation: fadein $transition-duration-med;
-  //   -o-animation: fadein $transition-duration-med;
-  //   animation: fadein $transition-duration-med;
-
-  //   &--list-item {
-
-  //     transform: translateY(0);
-  //     transition: transform $transition-duration-sorta-short linear;
-
-  //     a {
-  //       text-decoration: none;
-  //       font-size: 1.75rem;
-  //       color: map-get($colors, "burnt-yellow");
-  //     }
-
-  //     a:active {
-  //       color: map-get($colors, "burnt-yellow");
-  //     }
-      
-  //     a:visited {
-  //       color: map-get($colors, "burnt-yellow");
-  //     }
-
-  //     &:hover{
-  //       transform: translateY(-15%);
-  //     }
-  //   }
-  // }
-
   &__social-container {
     top: 50%;
     right: 2rem;
     transform: translateY(-50%);
-    width: 100px;
+    width: 300px;
   }
 }

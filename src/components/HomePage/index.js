@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import debounce from "utils/debounce";
 
@@ -35,38 +36,23 @@ export default class HomePage extends Component {
       };
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
-        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center  justify-between flex-col relative")}>
+        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
         
-          <div className={cx("mt2 relative")}>
-            <h1 className={cx("HomePage__headline-one text-center headline-serif color-burnt-yellow bold")}>{this.props.mainTitle}</h1>
+          <div className={cx("mt2 flex")}>
+            <h1 className={cx("HomePage__headline-one ml2 text-center headline-serif color-black bold")}>{this.props.mainTitle}</h1>
+          </div>
+
+          <div className={cx("HomePage__site-link absolute")}>
+            <h4 className={cx("relative headline-serif")}>link to</h4>
+            <h4 className={cx("relative headline-serif")}>more stuff</h4>
           </div>
 
           <div className={cx("HomePage__headline-three--container mb2")}>
-            <h3 className={cx("HomePage__headline-three text-center headline-serif color-burnt-yellow bold relative")}
+            <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative")}
             >{this.props.footerTitle}
             </h3>
-            <h6 className={cx("text-center headline-serif color-burnt-yellow bold")}>{this.props.footerSubTitle}</h6>
+            <h6 className={cx("text-center headline-serif color-black bold")}>{this.props.footerSubTitle}</h6>
           </div>
-
-          {/* <div></div>
-
-          <div></div> */}
-
-          {/* <div>
-            <ul className={cx("HomePage__footer-nav mb2")}>
-              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
-                <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer"><i class="fas fa-volume-up"></i></a>
-              </li>
-
-              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
-                <a href="https://www.instagram.com/cannonfew/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-              </li>
-
-              <li className={cx("HomePage__footer-nav--list-item mx1 inline-block")}>
-                <a href="https://twitter.com/cannon_few" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              </li>
-            </ul>
-          </div> */}
 
           <div className={cx("HomePage__social-container self-end absolute")}>
 
