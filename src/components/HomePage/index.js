@@ -30,22 +30,28 @@ export default class HomePage extends Component {
       });
     }
     
-    render() {
+    render() {      
       const backgroundImage = {
         backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
       };
+
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
         <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
         
-          <div className={cx("mt2 flex")}>
-            <h1 className={cx("HomePage__headline-one ml2 text-center headline-serif color-black bold")}>{this.props.mainTitle}</h1>
+          <div className={cx("mt2 flex justify-center")}>
+            {/* <h1 className={cx("HomePage__headline-one ml2 text-center headline-serif color-black bold")}>{this.props.mainTitle}</h1> */}
+            <img className={cx("col-3 h100")} src={this.props.logo.fields.file.url} alt=""/>
           </div>
 
-          <div className={cx("HomePage__site-link absolute")}>
-            <h4 className={cx("relative headline-serif")}>link to</h4>
-            <h4 className={cx("relative headline-serif")}>more stuff</h4>
-          </div>
+          <Link to="/stuff">
+          
+            <div className={cx("HomePage__site-link absolute")}>
+              <h4 className={cx("relative headline-serif")}>link to</h4>
+              <h4 className={cx("relative headline-serif")}>more stuff</h4>
+            </div>
+
+          </Link>
 
           <div className={cx("HomePage__headline-three--container mb2")}>
             <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative")}

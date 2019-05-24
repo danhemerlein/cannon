@@ -31,6 +31,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "basement": "https://github.com/sanctuarycomputer/basement.git"
+    "basement": "git+https://github.com/sanctuarycomputer/basement.git"
   }
 }
