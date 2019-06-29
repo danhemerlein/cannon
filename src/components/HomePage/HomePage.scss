@@ -1,37 +1,56 @@
 @import "../../styles/app.scss";
 
 .HomePage {
-  -webkit-animation: fadein $transition-duration-short;
-  -moz-animation: fadein $transition-duration-short;
-  -ms-animation: fadein $transition-duration-short;
-  -o-animation: fadein $transition-duration-short;
-  animation: fadein $transition-duration-short;
 
   height: 100vh;
+
+  &__logo-container {
+    height: 120px;
+
+    @media (min-width: 640px) {
+      height: 360px;
+    }
+
+    img {
+      width: 120px;
+
+      @media (min-width: 640px) {
+        width: 360px;
+      }
+    }
+  }
 
   &__headline-one {
     font-size: 4rem;
     cursor: default;
-    -webkit-animation: fadein $transition-duration-med;
-    -moz-animation: fadein $transition-duration-med;
-    -ms-animation: fadein $transition-duration-med;
-    -o-animation: fadein $transition-duration-med;
-    animation: fadein $transition-duration-med;
+
   }
   
   &__headline-three {
     font-size: 2rem;
     cursor: default;
-    -webkit-animation: fadein $transition-duration-med;
-    -moz-animation: fadein $transition-duration-med;
-    -ms-animation: fadein $transition-duration-med;
-    -o-animation: fadein $transition-duration-med;
-    animation: fadein $transition-duration-med;
   }
 
   &__site-link {
     top: 2rem;
     right: 2rem;
+    color: map-get($colors, "black");
+
+
+    &:visited {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+
+    &:active {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+    
+    &:hover {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
   }
 
   &__svg-container {

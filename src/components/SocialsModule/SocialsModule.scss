@@ -4,12 +4,6 @@
 
     &__nav {
     
-    -webkit-animation: fadein $transition-duration-med;
-    -moz-animation: fadein $transition-duration-med;
-    -ms-animation: fadein $transition-duration-med;
-    -o-animation: fadein $transition-duration-med;
-    animation: fadein $transition-duration-med;
-
     &--list-item {
 
       transform: scale(0.85);

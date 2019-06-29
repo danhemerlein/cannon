@@ -1,17 +1,30 @@
 @import "../../styles/app.scss";
 
 .Stuff {
-  // -webkit-animation: fadein $transition-duration-short;
-  // -moz-animation: fadein $transition-duration-short;
-  // -ms-animation: fadein $transition-duration-short;
-  // -o-animation: fadein $transition-duration-short;
-  // animation: fadein $transition-duration-short;
 
   height: 100vh;
 
   &__site-link {
     top: 2rem;
     right: 2rem;
+
+     color: map-get($colors, "black");
+
+
+    &:visited {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+
+    &:active {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+    
+    &:hover {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
   }
 
   &__social-container {

@@ -15,8 +15,10 @@ export default class Stuff extends Component {
 
     return (
       <div className="Stuff overflow-hidden w100">
+
         <div style={backgroundImage} className={cx("h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
-          <div className={cx("mt2 flex justify-center")}>
+
+          <div className={cx("flex justify-center")}>
             <img className={cx("col-3 h100")} src={this.props.logo.fields.file.url} alt="" />
           </div>
 
@@ -28,12 +30,23 @@ export default class Stuff extends Component {
 
           </Link>
 
-          <span>These</span>
-          <span>Are</span>
-          <span>Some</span>
-          <span>Random</span>
-          <span>Words</span>
-          <span>The possibilities for this area are endless</span>
+          <div className={cx("h100 flex flex-col items-center justify-center")}>
+            <span className={cx("headline-serif hauto")}>These</span>
+            <span className={cx("headline-serif")}>Are</span>
+            <span className={cx("headline-serif")}>Some</span>
+            <span className={cx("headline-serif")}>Random</span>
+            <span className={cx("headline-serif")}>Words</span>
+            <span className={cx("headline-serif")}>Could</span>
+            <span className={cx("headline-serif")}>Be</span>
+            <span className={cx("headline-serif")}>Tour</span>
+            <span className={cx("headline-serif")}>Dates</span>
+            <span className={cx("headline-serif")}>Or</span>
+            <span className={cx("headline-serif")}>Something</span>
+            <span className={cx("headline-serif")}>Else</span>
+            {/* <span className={cx("headline-serif")}>The possibilities for this area are endless</span> */}
+
+          
+          </div>
 
           <div className={cx("Stuff__social-container self-end absolute")}>
 
@@ -42,6 +55,16 @@ export default class Stuff extends Component {
               instagramLinkCTA={this.props.instagramLinkCTA}
               twitterLinkCTA={this.props.twitterLinkCTA}
             />
+
+          </div>
+
+
+          <div className={cx("HomePage__headline-three--container mb2")}>
+
+            <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative")}
+            >{this.props.footerTitle}
+            </h3>
+            <h6 className={cx("text-center headline-serif color-black bold")}>{this.props.footerSubTitle}</h6>
 
           </div>
 
