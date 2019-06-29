@@ -50,8 +50,10 @@ export default class HomePage extends Component {
 
           <Link to="/stuff">
           
-            <div className={cx("HomePage__site-link absolute")}>
-              <h4 className={cx("relative headline-serif")}>more stuff</h4>
+            <div className={cx("HomePage__site-link absolute flex")}>
+              <h4 className={cx("relative headline-serif")}>more</h4>
+              <span>&nbsp;</span>
+              <h4 className={cx("relative headline-serif")}>stuff</h4>
             </div>
 
           </Link>
