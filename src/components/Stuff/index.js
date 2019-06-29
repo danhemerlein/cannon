@@ -18,8 +18,8 @@ export default class Stuff extends Component {
 
         <div style={backgroundImage} className={cx("h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
 
-          <div className={cx("flex justify-center")}>
-            <img className={cx("col-3 h100")} src={this.props.logo.fields.file.url} alt="" />
+          <div className={cx("Stuff__logo-container flex justify-center")}>
+            <img className={cx("")} src={this.props.logo.fields.file.url} alt="" />
           </div>
 
           <Link to="/">
@@ -43,9 +43,6 @@ export default class Stuff extends Component {
             <span className={cx("headline-serif")}>Or</span>
             <span className={cx("headline-serif")}>Something</span>
             <span className={cx("headline-serif")}>Else</span>
-            {/* <span className={cx("headline-serif")}>The possibilities for this area are endless</span> */}
-
-          
           </div>
 
           <div className={cx("Stuff__social-container self-end absolute")}>

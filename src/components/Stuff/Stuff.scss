@@ -4,6 +4,22 @@
 
   height: 100vh;
 
+  &__logo-container {
+    height: 120px;
+
+    @media (min-width: 640px) {
+      height: 360px;
+    }
+
+    img {
+      width: 120px;
+
+      @media (min-width: 640px) {
+        width: 360px;
+      }
+    }
+  }
+
   &__site-link {
     top: 2rem;
     right: 2rem;
