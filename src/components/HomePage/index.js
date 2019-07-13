@@ -7,8 +7,23 @@ import './HomePage.scss'
 import cx from 'classnames';
 
 import SocialsModule from 'components/SocialsModule';
+import SocialToggle from 'components/SocialsToggle';
 
 export default class HomePage extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      navOpen: false,
+    }
+  }
+
+  toggleNav = () => {
+    this.setState({
+      navOpen: !this.state.navOpen,
+    })
+  }
 
   setHeightHP = () => {
     const homePage = document.querySelector('.HomePage');
@@ -40,8 +55,6 @@ export default class HomePage extends Component {
     window.removeEventListener("resize", this.debounceHPHeight);
   }
 
-  
-    
   render() {      
     const backgroundImage = {
       backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
@@ -76,9 +89,30 @@ export default class HomePage extends Component {
 
           </div>
 
-          <div className={cx("HomePage__social-container self-end absolute")}>
+          <div className={cx("HomePage__social-toggle absolute",
+            { 'HomePage__social-toggle--nav-open': this.state.navOpen === true }, {'HomePage__social-toggle--nav-closed': this.state.navOpen === false }
+          )}>
+
+            <SocialToggle
+              clickHandler={this.toggleNav}
+              navOpen={this.state.navOpen}
+            ></SocialToggle>
+
+          </div>
+
+          <div className={cx("HomePage__social-container HomePage__social-container--desktop self-end absolute")}>
 
             <SocialsModule 
+              soundLinkCTA={this.props.soundLinkCTA}
+              instagramLinkCTA={this.props.instagramLinkCTA}
+              twitterLinkCTA={this.props.twitterLinkCTA}
+            />
+
+          </div>
+
+          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
+
+            <SocialsModule
               soundLinkCTA={this.props.soundLinkCTA}
               instagramLinkCTA={this.props.instagramLinkCTA}
               twitterLinkCTA={this.props.twitterLinkCTA}

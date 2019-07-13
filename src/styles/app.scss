@@ -5,3 +5,13 @@
 @import "./transitions.scss";
 @import "./variables.scss";
 @import '~basement/src/index';
+
+.HomePage__social-container--mobile {
+  .SocialsModule {
+    justify-content: center;
+
+    .SocialsModule__nav--list-item, .SocialsModule__nav--list-item-svg {
+      justify-content: center;
+    }
+  }
+}

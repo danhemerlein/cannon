@@ -1,0 +1,46 @@
+@import "../../styles/app.scss";
+
+.SocialsToggle {
+
+  &__bar {
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    background: map-get($colors, "white");
+    // transform: rotate(0);
+    // transition: transform 2s cubic-bezier(0.25, 0.2, 0, 1);
+
+    :first-of-type {
+      margin-top: 0;
+    }
+
+    &--show {
+      display: block;
+      // -webkit-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -moz-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -ms-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -o-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
+    }
+
+    &--hide {
+      display: none;
+      // -webkit-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -moz-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -ms-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // -o-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
+      // animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
+    }
+
+    &--rotate {
+      transform: rotate(45deg);
+      margin-top: 0;
+    }
+    
+    &--rotate-counter {
+      transform: rotate(-45deg);
+      transition: transform 2s cubic-bezier(0.25, 0.2, 0, 1);
+      margin-top: 0;
+    }
+  }
+}

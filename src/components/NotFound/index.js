@@ -5,6 +5,9 @@ import debounce from "utils/debounce";
 import './NotFound.scss'
 
 export default class NotFound extends Component {
+
+  // FIX THIS HEIGHT SETTING CHAIN
+  
   setHeight = () => {
     const notFound = document.querySelector('.NotFound');
 
