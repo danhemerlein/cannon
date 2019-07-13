@@ -2,12 +2,35 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import cx from 'classnames';
+import debounce from "utils/debounce";
 
 import SocialsModule from 'components/SocialsModule';
 
 import './Stuff.scss'
 
 export default class Stuff extends Component {
+
+  setHeightStuff = () => {
+    const stuff = document.querySelector('.Stuff');
+
+    const stuffHeight = (window.innerHeight);
+
+    stuff.style.height = stuffHeight + "px";
+  }
+
+  debounceStuffHeight = () => {
+    debounce(this.setHeightStuff(), 100);
+  }
+
+  componentDidMount() {
+    this.setHeightStuff();
+    window.addEventListener("resize", this.debounceStuffHeight);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.debounceStuffHeight);
+  }
+
   render() {
     const backgroundImage = {
       backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"

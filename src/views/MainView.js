@@ -9,6 +9,7 @@ import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
+    console.log(model);
     
   return (
     <div className="App">
@@ -27,6 +28,7 @@ const MainView = ({ model }) => {
               twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
               backgroundImage={get(model, "fields.backgroundImage", {})}
               logo={get(model, "fields.logo", {})}
+              font={get(model, 'fields.font')}
             />
 
           )} />

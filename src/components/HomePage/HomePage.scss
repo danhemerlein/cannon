@@ -13,9 +13,17 @@
 
     img {
       width: 120px;
-
+      margin-left: 1rem;
+      transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
+      
       @media (min-width: 640px) {
+        margin-top: -30px;
+        width: 240px;
+      }
+
+      @media (min-width: 1024px) {
         width: 360px;
+        margin-top: -50px;
       }
     }
   }
@@ -27,6 +35,11 @@
   }
   
   &__headline-three {
+    font-size: 4rem;
+    cursor: default;
+  }
+
+  &__headline-six {
     font-size: 2rem;
     cursor: default;
   }
@@ -34,7 +47,8 @@
   &__site-link {
     top: 2rem;
     right: 2rem;
-    color: map-get($colors, "black");
+    font-size: 1.5rem;
+    color: map-get($colors, "white");
     flex-direction: column;
     text-align: right;
     
@@ -52,17 +66,17 @@
 
     &:visited {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
 
     &:active {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
     
     &:hover {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
   }
 

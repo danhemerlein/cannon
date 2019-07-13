@@ -10,47 +10,54 @@ import SocialsModule from 'components/SocialsModule';
 
 export default class HomePage extends Component {
 
-    setHeight = () => {
-      const homePage = document.querySelector('.HomePage');
+  setHeightHP = () => {
+    const homePage = document.querySelector('.HomePage');
 
-      const hpHeight = (window.innerHeight);
+    const hpHeight = (window.innerHeight);
 
-      homePage.style.height = hpHeight + "px";
-    }
+    homePage.style.height = hpHeight + "px";
+  }
 
-    debounceAPHeight = () => {
-      debounce(this.setHeight(), 100);
-    }
+  debounceHPHeight = () => {
+    debounce(this.setHeightHP(), 100);
+  }
 
-    componentDidMount() {
-      this.setHeight();
+  componentDidMount() {
+    this.setHeightHP();
+    window.addEventListener("resize", this.debounceHPHeight);
 
-      window.addEventListener("resize", () => {
-        this.setHeight();
-      });
-    }
+    const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
-    componentWillUnmount() {
-      window.removeEventListener("resize", this.setHeight);
-    }
+    AveraSans.load().then(function (loadedHand) {
+      document.fonts.add(loadedHand);
+      document.body.style.fontFamily = '"AveraSans", sans-serif';
+    }).catch(function (error) {
+      console.error('an error occured while loading the font');
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.debounceHPHeight);
+  }
+
+  
     
-    render() {      
-      const backgroundImage = {
-        backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
-      };
+  render() {      
+    const backgroundImage = {
+      backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
+    };
 
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
         <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
         
-          <div className={cx("HomePage__logo-container flex justify-center")}>
-            {/* <h1 className={cx("HomePage__headline-one ml2 text-center headline-serif color-black bold")}>{this.props.mainTitle}</h1> */}
-            <img className={cx("col-3")} src={this.props.logo.fields.file.url} alt=""/>
+          <div className={cx("HomePage__logo-container flex w100")}>
+            <img className={cx("")} src={this.props.logo.fields.file.url} alt=""/>
           </div>
 
           <Link to="/stuff">
           
-            <div className={cx("HomePage__site-link absolute flex")}>
+            <div className={cx("HomePage__site-link absolute flex color-white")}>
               <h4 className={cx("relative headline-serif")}>more</h4>
               <span>&nbsp;</span>
               <h4 className={cx("relative headline-serif")}>stuff</h4>
@@ -62,10 +69,10 @@ export default class HomePage extends Component {
 
           <div className={cx("HomePage__headline-three--container mb2")}>
 
-            <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative")}
+            <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative color-white")}
             >{this.props.footerTitle}
             </h3>
-            <h6 className={cx("text-center headline-serif color-black bold")}>{this.props.footerSubTitle}</h6>
+            <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
 
           </div>
 
