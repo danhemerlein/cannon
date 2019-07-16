@@ -27,10 +27,6 @@ export default class SocialsModule extends Component {
             </li>
 
             <li className={cx("SocialsModule__nav--list-item mb1 relative flex")}>
-              <a href="https://amazon.com/" target="_blank" rel="noopener noreferrer"><i className="fab color-white fa-amazon"></i></a>
-            </li>
-
-            <li className={cx("SocialsModule__nav--list-item mb1 relative flex")}>
               <a href="https://www.youtube.com/watch?v=CvCBDXDlSws&list=OLAK5uy_mDubMovuLaZSTSHPz05dU6kwpbKk7bSTo" target="_blank" rel="noopener noreferrer"><i className="fab color-white fa-youtube"></i></a>
             </li>
 

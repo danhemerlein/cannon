@@ -22,8 +22,8 @@
       }
 
       @media (min-width: 1024px) {
-        width: 360px;
-        margin-top: -50px;
+        width: 300px;
+        margin-top: -35px;
       }
     }
   }
@@ -132,8 +132,14 @@
   }
 
   &__social-toggle {
+
+    display: block;
     top: 50%;
     transform: translateX(0) translateY(-50%);
+
+     @media (min-width: 640px) {
+      display: none;
+    }
     
     &--nav-closed {
       right: 2rem;

@@ -33,7 +33,7 @@ const MainView = ({ model }) => {
 
           )} />
 
-          <Route exact path="/stuff" render={() => (
+          {/* <Route exact path="/stuff" render={() => (
 
             <Stuff 
               backgroundImage={get(model, "fields.backgroundImage", {})}
@@ -44,7 +44,7 @@ const MainView = ({ model }) => {
               twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
             />
 
-          )} />
+          )} /> */}
 
           <Route component={NotFound} />
 

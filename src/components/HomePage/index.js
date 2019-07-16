@@ -68,7 +68,7 @@ export default class HomePage extends Component {
             <img className={cx("")} src={this.props.logo.fields.file.url} alt=""/>
           </div>
 
-          <Link to="/stuff">
+          {/* <Link to="/stuff">
           
             <div className={cx("HomePage__site-link absolute flex color-white")}>
               <h4 className={cx("relative headline-serif")}>more</h4>
@@ -76,7 +76,7 @@ export default class HomePage extends Component {
               <h4 className={cx("relative headline-serif")}>stuff</h4>
             </div>
 
-          </Link>
+          </Link> */}
 
           <div className={cx("h100")}></div>
 
