@@ -16,20 +16,10 @@
 
     &--show {
       display: block;
-      // -webkit-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -moz-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -ms-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -o-animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // animation: fadein 2s cubic-bezier(0.25, 0.2, 0, 1);
     }
 
     &--hide {
       display: none;
-      // -webkit-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -moz-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -ms-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // -o-animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
-      // animation: fadeout 2s cubic-bezier(0.25, 0.2, 0, 1);
     }
 
     &--rotate {

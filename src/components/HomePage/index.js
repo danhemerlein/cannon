@@ -65,18 +65,19 @@ export default class HomePage extends Component {
         <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
         
           <div className={cx("HomePage__logo-container flex w100")}>
-            <img className={cx("")} src={this.props.logo.fields.file.url} alt=""/>
+            <Link to="/">
+              <img className={cx("")} src={this.props.logo.fields.file.url} alt=""/>
+            </Link>
           </div>
 
-          {/* <Link to="/stuff">
+          <Link to="/stuff">
           
-            <div className={cx("HomePage__site-link absolute flex color-white")}>
-              <h4 className={cx("relative headline-serif")}>more</h4>
-              <span>&nbsp;</span>
-              <h4 className={cx("relative headline-serif")}>stuff</h4>
+            <div className={cx("HomePage__site-link absolute flex flex-col color-white")}>
+              <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
+              <h4 className={cx("relative headline-serif")}>"These Walls" T-Shirt</h4>
             </div>
 
-          </Link> */}
+          </Link>
 
           <div className={cx("h100")}></div>
 

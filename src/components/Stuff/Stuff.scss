@@ -2,6 +2,8 @@
 
 .Stuff {
 
+
+
   height: 100vh;
 
   &__logo-container {
@@ -13,9 +15,17 @@
 
     img {
       width: 120px;
-
+      margin-left: 1rem;
+      transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
+      
       @media (min-width: 640px) {
-        width: 360px;
+        margin-top: -30px;
+        width: 240px;
+      }
+
+      @media (min-width: 1024px) {
+        width: 300px;
+        margin-top: -35px;
       }
     }
   }
@@ -24,22 +34,22 @@
     top: 2rem;
     right: 2rem;
 
-     color: map-get($colors, "black");
-
+    font-size: 1.5rem;
+    color: map-get($colors, "white");
 
     &:visited {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
 
     &:active {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
     
     &:hover {
       text-decoration: none;
-      color: map-get($colors, "black");
+      color: map-get($colors, "white");
     }
   }
 

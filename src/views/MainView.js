@@ -33,7 +33,7 @@ const MainView = ({ model }) => {
 
           )} />
 
-          {/* <Route exact path="/stuff" render={() => (
+          <Route exact path="/stuff" render={() => (
 
             <Stuff 
               backgroundImage={get(model, "fields.backgroundImage", {})}
@@ -42,9 +42,10 @@ const MainView = ({ model }) => {
               footerSubTitle={get(model, "fields.footerSubTitle", {})}
               instagramLinkCTA={get(model, "fields.instagramLinkCta", {})}
               twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
+              font={get(model, 'fields.font')}
             />
 
-          )} /> */}
+          )} />
 
           <Route component={NotFound} />
 
