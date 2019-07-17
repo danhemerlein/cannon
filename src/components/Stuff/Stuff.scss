@@ -2,26 +2,55 @@
 
 .Stuff {
 
-
-
   height: 100vh;
+
+  &__merch-headline {
+    font-size: 1rem;
+    
+    @media (min-width: 1024px) {
+      font-size: 1.5rem;
+    }
+
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    a {
+
+      color: map-get($colors, "white");
+
+      &:visited {
+        text-decoration: underline;
+        color: map-get($colors, "white");
+      }
+
+      &:active {
+        text-decoration: underline;
+        color: map-get($colors, "white");
+      }
+      
+      &:hover {
+        text-decoration: underline;
+        color: map-get($colors, "white");
+      }
+    }
+  }
 
   &__logo-container {
     height: 120px;
 
-    @media (min-width: 640px) {
-      height: 360px;
-    }
+    // @media (min-width: 640px) {
+    //   height: 360px;
+    // }
 
     img {
       width: 120px;
       margin-left: 1rem;
       transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
       
-      @media (min-width: 640px) {
-        margin-top: -30px;
-        width: 240px;
-      }
+      // @media (min-width: 640px) {
+      //   margin-top: -30px;
+      //   width: 240px;
+      // }
 
       @media (min-width: 1024px) {
         width: 300px;
@@ -53,10 +82,60 @@
     }
   }
 
+  &__merch-photo {
+
+    img {
+      height: 13rem;
+
+      @media (min-width: 400px) {
+        height: 15rem;
+      }
+
+       @media (min-width: 1024px) {
+        height: 20rem;
+      }
+    }
+
+    &--paragraph-front {
+      font-size: 1.5rem;
+      margin-right: 1.1rem;
+      display: none; 
+
+      @media (min-width: 400px) {
+        display: block;
+      }
+
+    }
+
+    &--paragraph-back {
+      font-size: 1.5rem;
+      margin-left: 1.1rem;
+    }
+
+    &--back {
+      display: none; 
+
+      @media (min-width: 400px) {
+        display: block;
+      }
+    }
+  }
+
   &__social-container {
     top: 50%;
     right: 2rem;
     transform: translateY(-50%);
     width: 300px;
   }
+
+  &__headline-three--container {
+    bottom: 2rem;
+  }
+
+  &__merch {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
+

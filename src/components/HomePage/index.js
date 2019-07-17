@@ -74,7 +74,17 @@ export default class HomePage extends Component {
           
             <div className={cx("HomePage__site-link absolute flex flex-col color-white")}>
               <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
-              <h4 className={cx("relative headline-serif")}>"These Walls" T-Shirt</h4>
+
+              <div className={cx("HomePage__site-link--desktop")}>
+                <h4 className={cx("relative headline-serif")}>"These Walls" T-Shirt</h4>
+              </div>
+
+              <div className={cx("HomePage__site-link--mobile")}>
+
+                <h4 className={cx("relative headline-serif")}>"These Walls"</h4>
+                <h4 className={cx("relative headline-serif")}>T-Shirt</h4>
+              </div>
+
             </div>
 
           </Link>

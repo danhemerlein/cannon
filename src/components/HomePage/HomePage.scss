@@ -60,6 +60,20 @@
       }    
     }
 
+    &--mobile {
+      display: block;
+      @media (min-width: 400px) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+      @media (min-width: 400px) {
+        display: block;
+      }
+    }
+
     &:visited {
       text-decoration: none;
       color: map-get($colors, "white");

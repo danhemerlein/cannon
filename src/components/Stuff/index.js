@@ -33,12 +33,33 @@ export default class Stuff extends Component {
     stuff.style.height = stuffHeight + "px";
   }
 
+  // setHeightStuffMerch = () => {
+  //   const stuffMerch = document.querySelector('.Stuff__merch');
+  //   const header = document.querySelector('.Stuff__logo-container');
+  //   const footer = document.querySelector('.Stuff__headline-three--container');
+
+  //   const windowHeight = (window.innerHeight);
+
+  //   const combined = windowHeight - header.offsetHeight - footer.offsetHeight - footer.offsetHeight;
+
+  //   stuffMerch.style.height = combined + "px";
+
+  //   console.log(windowHeight);
+  //   console.log(header.offsetHeight);
+  //   console.log(footer.offsetHeight);
+  //   console.log(windowHeight - header.offsetHeight - footer.offsetHeight);
+    
+  // }
+
   debounceStuffHeight = () => {
     debounce(this.setHeightStuff(), 100);
+    // debounce(this.setHeightStuffMerch(), 100);
   }
 
   componentDidMount() {
     this.setHeightStuff();
+    // this.setHeightStuffMerch();
+
     window.addEventListener("resize", this.debounceStuffHeight);
 
     const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
@@ -81,9 +102,32 @@ export default class Stuff extends Component {
 
           </Link>
 
-          <div className={cx("h100")}></div>
+          <div className={cx("Stuff__merch w100 p2 absolute flex items-center justify-center flex-col")}>
 
-          <div className={cx("HomePage__headline-three--container mb2")}>
+            <div className={cx("w100 flex items-center justify-center flex-col")}>
+              <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-6 pt2 px2")}>Limited Edition "These Walls" T-Shirt</h4>
+              <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-6 pb2 px2")}>
+                <a href="mailto:luke@overeasyusa.com">email to order</a>
+              </h4>
+            </div>
+
+            <div className={cx("flex items-center justify-center flex-col md:flex-row")}>
+
+              <div className={cx("Stuff__merch-photo")}>
+                <img className={cx("")} src={this.props.merchPrimary.fields.file.url} alt="" />
+                <p className="Stuff__merch-photo--paragraph-front text-center color-white">front</p>
+              </div>
+
+              <div className={cx("Stuff__merch-photo Stuff__merch-photo--back")}>
+                <img className={cx("")} src={this.props.merchSecondary.fields.file.url} alt="" />
+                <p className="Stuff__merch-photo--paragraph-back text-center color-white">back</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className={cx("Stuff__headline-three--container absolute none md:block")}>
 
             <h3 className={cx("HomePage__headline-three text-center headline-serif bold color-white")}
             >{this.props.footerTitle}

@@ -43,6 +43,8 @@ const MainView = ({ model }) => {
               instagramLinkCTA={get(model, "fields.instagramLinkCta", {})}
               twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
               font={get(model, 'fields.font')}
+              merchPrimary={get(model, 'fields.merchPrimary')}
+              merchSecondary={get(model, 'fields.merchSecondary')}
             />
 
           )} />
