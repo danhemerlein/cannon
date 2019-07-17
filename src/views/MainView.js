@@ -33,7 +33,7 @@ const MainView = ({ model }) => {
 
           )} />
 
-          <Route exact path="/stuff" render={() => (
+          <Route exact path="/t-shirt" render={() => (
 
             <Stuff 
               backgroundImage={get(model, "fields.backgroundImage", {})}

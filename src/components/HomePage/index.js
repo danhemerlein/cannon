@@ -70,7 +70,7 @@ export default class HomePage extends Component {
             </Link>
           </div>
 
-          <Link to="/stuff">
+          <Link to="/t-shirt">
           
             <div className={cx("HomePage__site-link absolute flex flex-col color-white")}>
               <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
