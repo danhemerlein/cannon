@@ -28,20 +28,73 @@
     }
   }
 
+    &__secondary-logo-container {
+      height: 120px;
+      bottom: -1rem;
+
+      @media (min-width: 640px) {
+        height: 240px;
+        bottom: -4rem;
+      }
+
+      img {
+        width: 120px;
+        margin-left: 1rem;
+        transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
+        
+        @media (min-width: 640px) {
+          width: 145px;
+        }
+      }
+    }
+
+  &__headline-three--container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+
+    a {
+        text-decoration: none;
+        color: map-get($colors, "white");
+
+      &:visited {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
+
+      &:active {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
+      
+      &:hover {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
+    }
+
+  }
+
   &__headline-one {
     font-size: 4rem;
     cursor: default;
-
   }
   
   &__headline-three {
-    font-size: 4rem;
-    cursor: default;
+    font-size: 2rem;
+    
+    @media (min-width: 640px) {
+      font-size: 5.5rem;
+    }
   }
 
   &__headline-six {
-    font-size: 2rem;
-    cursor: default;
+    font-size: 1rem;
+
+    @media (min-width: 640px) {
+      font-size: 3rem;
+    }
   }
 
   &__site-link {
@@ -117,7 +170,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // background: map-get($colors, "black");
       background: #000000BF;
       width: 200px;
       z-index: 1;
@@ -142,7 +194,6 @@
   }
 
   &__social-toggle {
-
     display: block;
     top: 50%;
     transform: translateX(0) translateY(-50%);

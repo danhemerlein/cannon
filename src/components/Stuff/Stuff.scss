@@ -4,10 +4,16 @@
 
   height: 100vh;
 
+  ul {
+    list-style: circle;
+  }
+
   &__merch-headline {
-    font-size: 1rem;
-    
-    @media (min-width: 1024px) {
+    font-size: 0.8rem;
+    // border-bottom: 1px solid;
+    // border-color: rgba(0, 0, 0, 0.85);
+
+    @media (min-width: 620px) {
       font-size: 1.5rem;
     }
 
@@ -136,6 +142,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &__merch-details-placeholder {
+    display: none;
+
+    @media (min-width: 500px) {
+      display: block;
+    }
   }
 }
 

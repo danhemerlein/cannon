@@ -28,6 +28,7 @@ const MainView = ({ model }) => {
               twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
               backgroundImage={get(model, "fields.backgroundImage", {})}
               logo={get(model, "fields.logo", {})}
+              secondaryLogo={get(model, "fields.secondaryLogo", {})}
               font={get(model, 'fields.font')}
             />
 
@@ -38,6 +39,7 @@ const MainView = ({ model }) => {
             <Stuff 
               backgroundImage={get(model, "fields.backgroundImage", {})}
               logo={get(model, "fields.logo", {})}
+              secondaryLogo={get(model, "fields.secondaryLogo", {})}
               footerTitle={get(model, "fields.footerTitle", {})}
               footerSubTitle={get(model, "fields.footerSubTitle", {})}
               instagramLinkCTA={get(model, "fields.instagramLinkCta", {})}

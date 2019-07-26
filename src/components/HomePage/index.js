@@ -62,7 +62,7 @@ export default class HomePage extends Component {
 
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
-        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex items-center justify-between flex-col relative")}>
+        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex flex-col relative")}>
         
           <div className={cx("HomePage__logo-container flex w100")}>
             <Link to="/">
@@ -89,14 +89,16 @@ export default class HomePage extends Component {
 
           </Link>
 
-          <div className={cx("h100")}></div>
+          <div className={cx("HomePage__headline-three--container col-12")}>
 
-          <div className={cx("HomePage__headline-three--container mb2")}>
+            <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
 
-            <h3 className={cx("HomePage__headline-three text-center headline-serif color-black bold relative color-white")}
-            >{this.props.footerTitle}
-            </h3>
-            <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
+              <h3 className={cx("HomePage__headline-three text-center headline-serif bold relative color-white")}
+              >{this.props.footerTitle}
+              </h3>
+              <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
+
+            </a>
 
           </div>
 
@@ -129,6 +131,10 @@ export default class HomePage extends Component {
               twitterLinkCTA={this.props.twitterLinkCTA}
             />
 
+          </div>
+
+          <div className={cx("HomePage__secondary-logo-container flex absolute")}>
+            <img className={cx("")} src={this.props.secondaryLogo.fields.file.url} alt="" />
           </div>
 
         </div>

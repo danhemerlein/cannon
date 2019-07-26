@@ -40,6 +40,10 @@ export default class SocialsModule extends Component {
               <span className={cx("SocialsModule__nav--list-item-cta absolute headline-serif color-white")}>{this.props.twitterLinkCTA}</span>
             </li>
 
+            <li className={cx("SocialsModule__nav--list-item mb1 relative flex")}>
+              <a href="https://www.facebook.com/cannonsmusic/" target="_blank" rel="noopener noreferrer"><i className="fab color-white fa-facebook"></i></a>
+            </li>
+
             <li className={cx("SocialsModule__nav--list-item SocialsModule__nav--list-item-svg flex relative")}>
               <a href="https://open.spotify.com/track/4P5d7lMNGqMPcVBn994Lbp?si=lxlB9FUqRHupxW7IGDSzgQ" target="_blank" rel="noopener noreferrer" className="block"><WaterGlass></WaterGlass></a>
             </li>
