@@ -104,18 +104,18 @@ export default class Stuff extends Component {
 
           <div className={cx("Stuff__merch w100 p2 absolute flex items-center justify-center flex-col")}>
 
-            <div className={cx("w100 flex items-center justify-center flex-col col-10")}>
+            <div className={cx("Stuff__merch-headline--container flex items-center justify-center flex-col col-10 md:col-6")}>
               <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-6 pt2 px2")}>Limited Edition "These Walls" T-Shirt</h4>
 
               <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-6 pb2 px2")}>
                 <a href="mailto:luke@overeasyusa.com">email to order</a>
               </h4>
 
-              <div className={cx("Stuff__merch-details-placeholder")}>
+              <div className={cx("Stuff__merch-details-placeholder col-12 md:col-6")}>
 
-                <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-6 pb2 px2")}>To complete the order, please include in your email: </h4>
+                <h4 className={cx("Stuff__merch-headline headline-serif color-white pb2 px2")}>To complete the order, please include in your email: </h4>
 
-                <ul className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-6 pb2 px2")}> 
+                <ul className={cx("Stuff__merch-headline headline-serif color-white pb2 px2")}> 
                   <li className={cx("text-left w100 ml2")}>
                     Size and quantity of shirts (S, M, L)
                   </li>
