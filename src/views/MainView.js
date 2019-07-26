@@ -9,7 +9,6 @@ import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
-    console.log(model);
     
   return (
     <div className="App">
