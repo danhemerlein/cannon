@@ -89,15 +89,18 @@ export default class HomePage extends Component {
 
           </Link>
 
-          <div className={cx("HomePage__headline-three--container col-12")}>
+          <div className={cx("HomePage__headline-three--container")}>
 
             <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
 
-              <h3 className={cx("HomePage__headline-three text-center headline-serif bold relative color-white")}
+              <h3 className={cx("HomePage__headline-three text-center headline-serif bold color-white")}
               >{this.props.footerTitle}
               </h3>
-              <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
 
+            </a>
+
+            <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
+              <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
             </a>
 
           </div>

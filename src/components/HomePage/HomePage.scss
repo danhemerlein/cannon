@@ -33,17 +33,17 @@
       bottom: -1rem;
 
       @media (min-width: 640px) {
-        height: 240px;
-        bottom: -4rem;
+        height: 185px;
+        bottom: -3rem;
       }
 
       img {
-        width: 120px;
+        width: 72px;
         margin-left: 1rem;
         transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
         
         @media (min-width: 640px) {
-          width: 145px;
+          width: 111px;
         }
       }
     }
