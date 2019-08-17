@@ -45,27 +45,14 @@
   }
 
   &__logo-container {
-    height: 120px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    z-index: 10;
+  }
 
-    // @media (min-width: 640px) {
-    //   height: 360px;
-    // }
-
-    img {
-      width: 120px;
-      margin-left: 1rem;
-      transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
-      
-      // @media (min-width: 640px) {
-      //   margin-top: -30px;
-      //   width: 240px;
-      // }
-
-      @media (min-width: 1024px) {
-        width: 300px;
-        margin-top: -35px;
-      }
-    }
+  &__secondary-logo-container {
+    bottom: 2rem;
+    left: 2rem;
   }
 
   &__site-link {
@@ -88,6 +75,26 @@
     &:hover {
       text-decoration: none;
       color: map-get($colors, "white");
+    }
+
+    a {
+        text-decoration: none;
+        color: map-get($colors, "white");
+
+      &:visited {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
+
+      &:active {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
+      
+      &:hover {
+        text-decoration: none;
+        color: map-get($colors, "white");
+      }
     }
   }
 

@@ -64,9 +64,9 @@ export default class HomePage extends Component {
       <div className={cx("HomePage overflow-hidden w100")}>
         <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex flex-col relative")}>
         
-          <div className={cx("HomePage__logo-container flex w100")}>
+          <div className={cx("HomePage__logo-container flex w100 col-2")}>
             <Link to="/">
-              <img className={cx("")} src={this.props.logo.fields.file.url} alt=""/>
+              <img className={cx("w100")} src={this.props.logo.fields.file.url} alt=""/>
             </Link>
           </div>
 
@@ -136,8 +136,8 @@ export default class HomePage extends Component {
 
           </div>
 
-          <div className={cx("HomePage__secondary-logo-container flex absolute")}>
-            <img className={cx("")} src={this.props.secondaryLogo.fields.file.url} alt="" />
+          <div className={cx("HomePage__secondary-logo-container flex absolute md:col-1 col-2")}>
+            <img className={cx("w100")} src={this.props.secondaryLogo.fields.file.url} alt="" />
           </div>
 
         </div>

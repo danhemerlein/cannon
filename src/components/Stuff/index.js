@@ -86,25 +86,25 @@ export default class Stuff extends Component {
 
         <div style={backgroundImage} className={cx("h100 bg-cover overflow-hidden flex flex-col relative")}>
 
-
-            <div className={cx("Stuff__logo-container flex w100")}>
-              <Link to="/">
-                  <img className={cx("")} src={this.props.logo.fields.file.url} alt="" />
-              </Link>
-            </div>
-
+          <div className={cx("HomePage__logo-container flex w100 col-2")}>
+            <Link to="/">
+              <img className={cx("w100")} src={this.props.logo.fields.file.url} alt="" />
+            </Link>
+          </div>
 
           <Link to="/">
 
             <div className={cx("Stuff__site-link absolute")}>
-              <h4 className={cx("relative headline-serif")}>home</h4>
+              <Link to="/">
+                <h4 className={cx("relative headline-serif")}>home</h4>
+              </Link>
             </div>
 
           </Link>
 
-          <div className={cx("Stuff__merch w100 p2 absolute flex items-center justify-center flex-col")}>
+          <div className={cx("Stuff__merch col-10 md:col-6 p2 absolute flex items-center justify-center flex-col")}>
 
-            <div className={cx("Stuff__merch-headline--container flex items-center justify-center flex-col col-10 md:col-6")}>
+            <div className={cx("Stuff__merch-headline--container flex items-center justify-center flex-col w100")}>
               <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-6 pt2 px2")}>Limited Edition "These Walls" T-Shirt</h4>
 
               <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-6 pb2 px2")}>
@@ -131,6 +131,7 @@ export default class Stuff extends Component {
                 </ul>
 
               </div>
+              
             </div>
 
             <div className={cx("flex items-center justify-center flex-col md:flex-row")}>
@@ -148,15 +149,6 @@ export default class Stuff extends Component {
             </div>
 
           </div>
-
-          {/* <div className={cx("Stuff__headline-three--container absolute none md:block")}>
-
-            <h3 className={cx("HomePage__headline-three text-center headline-serif bold color-white")}
-            >{this.props.footerTitle}
-            </h3>
-            <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
-
-          </div> */}
 
           <div className={cx("HomePage__social-toggle absolute",
             { 'HomePage__social-toggle--nav-open': this.state.navOpen === true }, { 'HomePage__social-toggle--nav-closed': this.state.navOpen === false }
@@ -189,8 +181,8 @@ export default class Stuff extends Component {
 
           </div>
 
-          <div className={cx("HomePage__secondary-logo-container flex absolute")}>
-            <img className={cx("")} src={this.props.secondaryLogo.fields.file.url} alt="" />
+          <div className={cx("HomePage__secondary-logo-container flex absolute md:col-1 col-2")}>
+            <img className={cx("w100")} src={this.props.secondaryLogo.fields.file.url} alt="" />
           </div>
 
         </div>
