@@ -1,0 +1,11 @@
+@import "../../styles/app.scss";
+
+.SecondaryLogo {
+  bottom: 1rem;
+  left: 1rem;
+
+  @media (min-width: 640px) {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+}

@@ -8,6 +8,8 @@ import cx from 'classnames';
 
 import SocialsModule from 'components/SocialsModule';
 import SocialToggle from 'components/SocialsToggle';
+import MainLogo from 'components/MainLogo';
+import SecondaryLogo from 'components/SecondaryLogo';
 
 export default class HomePage extends Component {
 
@@ -63,12 +65,10 @@ export default class HomePage extends Component {
     return (
       <div className={cx("HomePage overflow-hidden w100")}>
         <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex flex-col relative")}>
-        
-          <div className={cx("HomePage__logo-container flex w100 col-2")}>
-            <Link to="/">
-              <img className={cx("w100")} src={this.props.logo.fields.file.url} alt=""/>
-            </Link>
-          </div>
+
+          <MainLogo
+            src={this.props.logo.fields.file.url}>
+          </MainLogo>
 
           <Link to="/t-shirt">
           
@@ -83,6 +83,7 @@ export default class HomePage extends Component {
 
                 <h4 className={cx("relative headline-serif")}>"These Walls"</h4>
                 <h4 className={cx("relative headline-serif")}>T-Shirt</h4>
+
               </div>
 
             </div>
@@ -136,9 +137,9 @@ export default class HomePage extends Component {
 
           </div>
 
-          <div className={cx("HomePage__secondary-logo-container flex absolute md:col-1 col-2")}>
-            <img className={cx("w100")} src={this.props.secondaryLogo.fields.file.url} alt="" />
-          </div>
+          <SecondaryLogo
+            src={this.props.secondaryLogo.fields.file.url}
+          ></SecondaryLogo>
 
         </div>
 

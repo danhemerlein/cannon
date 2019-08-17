@@ -7,8 +7,6 @@
     width: 25px;
     margin-top: 5px;
     background: map-get($colors, "white");
-    // transform: rotate(0);
-    // transition: transform 2s cubic-bezier(0.25, 0.2, 0, 1);
 
     :first-of-type {
       margin-top: 0;
