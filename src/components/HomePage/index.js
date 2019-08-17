@@ -29,10 +29,14 @@ export default class HomePage extends Component {
 
   setHeightHP = () => {
     const homePage = document.querySelector('.HomePage');
+    const frame = document.querySelector('iframe');
 
     const hpHeight = (window.innerHeight);
 
     homePage.style.height = hpHeight + "px";
+
+    frame.style.height = "275px"; 
+
   }
 
   debounceHPHeight = () => {
@@ -94,15 +98,26 @@ export default class HomePage extends Component {
 
             <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
 
-              <h3 className={cx("HomePage__headline-three text-center headline-serif bold color-white")}
+              <h3 className={cx("HomePage__headline-three headline-serif bold color-white")}
               >{this.props.footerTitle}
               </h3>
 
             </a>
 
             <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
-              <h6 className={cx("HomePage__headline-six text-center headline-serif color-white bold")}>{this.props.footerSubTitle}</h6>
+              <h6 className={cx("HomePage__headline-six headline-serif color-white bold")}>Lyric Video Out Now</h6>
             </a>
+
+          </div>
+
+          <div className="HomePage__container-iframe absolute">
+
+            <iframe className="col-12" title="Ocean Cycle (Live in a Liquid House)" src="https://www.youtube.com/embed/wNESoi5Ty2Q" frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen="allowfullscreen"
+              mozallowfullscreen="mozallowfullscreen"
+              msallowfullscreen="msallowfullscreen"
+              oallowfullscreen="oallowfullscreen"
+              webkitallowfullscreen="webkitallowfullscreen"></iframe>
 
           </div>
 
