@@ -60,23 +60,7 @@
     right: 2rem;
 
     font-size: 1.5rem;
-    color: map-get($colors, "white");
-
-    &:visited {
-      text-decoration: none;
-      color: map-get($colors, "white");
-    }
-
-    &:active {
-      text-decoration: none;
-      color: map-get($colors, "white");
-    }
-    
-    &:hover {
-      text-decoration: none;
-      color: map-get($colors, "white");
-    }
-
+   
     a {
         text-decoration: none;
         color: map-get($colors, "white");
