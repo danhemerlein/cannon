@@ -65,27 +65,27 @@ export default class Stuff extends Component {
 
             <div className={cx("Stuff__merch-headline--container flex items-center justify-center flex-col w100")}>
             
-              <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-8 px2")}>Limited Edition "These Walls" T-Shirt</h4>
+              <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-8")}>Limited Edition "These Walls" T-Shirt</h4>
 
-              <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-8 pb2 px2")}>
+              <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-8 pb2")}>
                 <a href="mailto:luke@overeasyusa.com">email to order</a>
               </h4>
 
               <div className={cx("col-12 md:col-8")}>
 
-                <h4 className={cx("Stuff__merch-headline headline-serif color-white pb2 px2")}>To complete the order, please include in your email: </h4>
+                <h4 className={cx("Stuff__merch-headline headline-serif color-white pb2")}>To complete the order, please include in your email: </h4>
 
-                <ul className={cx("Stuff__merch-headline headline-serif color-white pb2 px2")}> 
-                  <li className={cx("text-left w100 ml2")}>
+                <ul className={cx("Stuff__merch-headline headline-serif color-white pb2")}> 
+                  <li className={cx("text-left w100 ml2 py_5 md:py0")}>
                     Size and quantity of shirts (S, M, L)
                   </li>
-                  <li className={cx("text-left w100 ml2")}>
+                  <li className={cx("text-left w100 ml2 md:py0")}>
                     Your shipping address
                   </li>
-                  <li className={cx("text-left w100 ml2")}>
+                  <li className={cx("text-left w100 ml2 md:py0")}>
                     Venmo (@ldoyle98) total amount of order ($20/shirt + $10 shipping)
                   </li>
-                  <li className={cx("text-left w100 ml2")}>
+                  <li className={cx("text-left w100 ml2 md:py0")}>
                     Upon receipt, order will be shipped in 3-5 business days (email confirmation)
                   </li>
                 </ul>
