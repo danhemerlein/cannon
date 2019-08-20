@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import debounce from "utils/debounce";
-
 import './HomePage.scss'
 import cx from 'classnames';
 
@@ -27,26 +25,7 @@ export default class HomePage extends Component {
     })
   }
 
-  setHeightHP = () => {
-    const homePage = document.querySelector('.HomePage');
-    const frame = document.querySelector('iframe');
-
-    const hpHeight = (window.innerHeight);
-
-    homePage.style.height = hpHeight + "px";
-
-    frame.style.height = "275px"; 
-
-  }
-
-  debounceHPHeight = () => {
-    debounce(this.setHeightHP(), 100);
-  }
-
   componentDidMount() {
-    this.setHeightHP();
-    window.addEventListener("resize", this.debounceHPHeight);
-
     const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
     AveraSans.load().then(function (loadedHand) {
@@ -57,62 +36,64 @@ export default class HomePage extends Component {
     });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.debounceHPHeight);
-  }
-
   render() {      
     const backgroundImage = {
       backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
     };
 
     return (
-      <div className={cx("HomePage overflow-hidden w100")}>
-        <div style={backgroundImage} className={cx("HomePage__image1 h100 bg-cover overflow-hidden flex flex-col relative")}>
+      <div className={cx("HomePage w100")}>
+        <div style={backgroundImage} className={cx("HomePage__image1 h100 flex bg-cover flex-col relative")}>
 
-          <MainLogo
-            src={this.props.logo.fields.file.url}>
-          </MainLogo>
+          <div className="flex w100 justify-between p1 md:p2 mb8">
 
-          <Link to="/t-shirt">
-          
-            <div className={cx("HomePage__site-link absolute flex flex-col color-white")}>
-              <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
+            <MainLogo
+              src={this.props.logo.fields.file.url}>
+            </MainLogo>
 
-              <div className={cx("HomePage__site-link--desktop")}>
-                <h4 className={cx("relative headline-serif")}>"These Walls" T-Shirt</h4>
-              </div>
+            <div className="HomePage__site-link">
 
-              <div className={cx("HomePage__site-link--mobile")}>
+              <Link to="/t-shirt">
+              
+                <div className={cx("HomePage__site-link flex flex-col color-white")}>
+                  <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
 
-                <h4 className={cx("relative headline-serif")}>"These Walls"</h4>
-                <h4 className={cx("relative headline-serif")}>T-Shirt</h4>
+                  <div className={cx("HomePage__site-link--desktop")}>
+                    <h4 className={cx("relative headline-serif")}>"These Walls" T-Shirt</h4>
+                  </div>
 
-              </div>
+                  <div className={cx("HomePage__site-link--mobile")}>
+
+                    <h4 className={cx("relative headline-serif")}>"These Walls"</h4>
+                    <h4 className={cx("relative headline-serif")}>T-Shirt</h4>
+
+                  </div>
+
+                </div>
+
+              </Link>
 
             </div>
 
-          </Link>
-
-          <div className={cx("HomePage__headline-three--container")}>
-
-            <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
-
-              <h3 className={cx("HomePage__headline-three headline-serif bold color-white")}
-              >{this.props.footerTitle}
-              </h3>
-
-            </a>
-
-            <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
-              <h6 className={cx("HomePage__headline-six headline-serif color-white bold")}>Lyric Video Out Now</h6>
-            </a>
-
           </div>
 
-          <div className="HomePage__container-iframe absolute">
+          <div className={cx("HomePage__headline-center-container flex justify-center flex-col text-center mt8 mb4 p1 md:p2")}>
+            <h3 className={cx("HomePage__headline-three headline-serif bold color-white inline-block")}>  
+              <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
+                {this.props.footerTitle}
+              </a>
+            </h3>
 
-            <iframe className="col-12" title="Ocean Cycle (Live in a Liquid House)" src="https://www.youtube.com/embed/wNESoi5Ty2Q" frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            <h6 className={cx("HomePage__headline-six headline-serif color-white bold inline-block")}>
+              <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
+                Lyric Video Out Now
+              </a>
+            </h6>
+          </div>
+
+          <div className="HomePage__container-iframe w100 flex justify-center">
+
+            <iframe className="col-12 p1 md:p2 mb8" title="These Walls Lyric Video" src="https://www.youtube.com/embed/wNESoi5Ty2Q" frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="allowfullscreen"
               mozallowfullscreen="mozallowfullscreen"
               msallowfullscreen="msallowfullscreen"

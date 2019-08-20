@@ -2,46 +2,21 @@
 
 .Stuff {
 
-  height: 100vh;
+  overflow-x: hidden;
 
   ul {
     list-style: circle;
   }
 
   &__merch-headline {
-    font-size: 0.8rem;
-    // border-bottom: 1px solid;
-    // border-color: rgba(0, 0, 0, 0.85);
+    @include anchor;
+    font-size: 1.5rem;
 
     @media (min-width: 620px) {
       font-size: 1.5rem;
     }
 
-    &--container {
-      background-color: rgba(0, 0, 0, 0.85);
-    }
-
     text-align: center;
-
-    a {
-
-      color: map-get($colors, "white");
-
-      &:visited {
-        text-decoration: underline;
-        color: map-get($colors, "white");
-      }
-
-      &:active {
-        text-decoration: underline;
-        color: map-get($colors, "white");
-      }
-      
-      &:hover {
-        text-decoration: underline;
-        color: map-get($colors, "white");
-      }
-    }
   }
 
   &__logo-container {
@@ -55,30 +30,10 @@
   }
 
   &__site-link {
+    @include anchor;
     top: 2rem;
     right: 2rem;
-
-    font-size: 1.5rem;
-   
-    a {
-        text-decoration: none;
-        color: map-get($colors, "white");
-
-      &:visited {
-        text-decoration: none;
-        color: map-get($colors, "white");
-      }
-
-      &:active {
-        text-decoration: none;
-        color: map-get($colors, "white");
-      }
-      
-      &:hover {
-        text-decoration: none;
-        color: map-get($colors, "white");
-      }
-    }
+    font-size: 1.5rem;   
   }
 
   &__merch-photo {
@@ -98,12 +53,6 @@
     &--paragraph-front {
       font-size: 1.5rem;
       margin-right: 1.1rem;
-      display: none; 
-
-      @media (min-width: 1024px) {
-        display: block;
-      }
-
     }
 
     &--paragraph-back {
@@ -111,13 +60,6 @@
       margin-left: 1.1rem;
     }
 
-    &--back {
-      display: none; 
-
-      @media (min-width: 1024px) {
-        display: block;
-      }
-    }
   }
 
   &__social-container {
@@ -129,20 +71,6 @@
 
   &__headline-three--container {
     bottom: 2rem;
-  }
-
-  &__merch {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__merch-details-placeholder {
-    display: none;
-
-    @media (min-width: 1024px) {
-      display: block;
-    }
   }
 }
 
