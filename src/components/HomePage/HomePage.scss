@@ -4,6 +4,12 @@
 
   overflow-x: hidden;
 
+  &__close-x {
+    font-size: 4rem;
+    top: 2rem;
+    left: 2rem;
+  }
+
   &__headline-center-container {
     @include anchor;
   }

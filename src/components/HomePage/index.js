@@ -25,7 +25,17 @@ export default class HomePage extends Component {
     })
   }
 
+  closeNav = () => {
+    if (this.state.navOpen) {
+      this.setState({
+        navOpen: false,
+      })
+    }
+  }
+
   componentDidMount() {
+    window.addEventListener("scroll", this.closeNav);
+
     const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
     AveraSans.load().then(function (loadedHand) {
@@ -106,10 +116,10 @@ export default class HomePage extends Component {
             { 'HomePage__social-toggle--nav-open': this.state.navOpen === true }, {'HomePage__social-toggle--nav-closed': this.state.navOpen === false }
           )}>
 
-            <SocialToggle
-              clickHandler={this.toggleNav}
-              navOpen={this.state.navOpen}
-            ></SocialToggle>
+              <SocialToggle
+                clickHandler={this.toggleNav}
+                navOpen={this.state.navOpen}
+              ></SocialToggle>
 
           </div>
 
@@ -123,8 +133,9 @@ export default class HomePage extends Component {
 
           </div>
 
-          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
+          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute flex flex-col", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
 
+       
             <SocialsModule
               soundLinkCTA={this.props.soundLinkCTA}
               instagramLinkCTA={this.props.instagramLinkCTA}

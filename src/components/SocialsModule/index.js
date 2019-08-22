@@ -10,7 +10,7 @@ export default class SocialsModule extends Component {
 
   render() {
     return (
-      <div className={cx("SocialsModule overflow-hidden w100")}>
+      <div className={cx("SocialsModule overflow-hidden w100 relative")}>
 
         <div>
           <ul className={cx("SocialsModule__nav")}>

@@ -26,9 +26,17 @@ export default class Stuff extends Component {
     })
   }
 
-  componentDidMount() {
+  closeNav = () => {
+    if (this.state.navOpen) {
+      this.setState({
+        navOpen: false,
+      })
+    }
+  }
 
-    window.addEventListener("resize", this.debounceStuffHeight);
+  componentDidMount() {
+    
+    window.addEventListener("scroll", this.closeNav);
 
     const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
