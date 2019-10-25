@@ -8,6 +8,44 @@
     list-style: circle;
   }
 
+  &__bg {    
+  }
+
+  &__sold-out-message {
+    font-size: 1.7rem;
+    background: firebrick;
+    top: 18%;
+    transform: rotate(-25deg);
+    transform-origin: center center;
+
+    @media (min-width: 620px) {
+      font-size: 2rem;
+    }
+
+  }
+
+  &__sold-out-message-two {
+    font-size: 1.7rem;
+    background: firebrick;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transform-origin: center center;
+
+    @media (min-width: 620px) {
+      font-size: 2rem;
+    }
+
+  }
+
+  &__merch {
+    max-width: 1024px;
+  }
+  
+  &__merch-photo-container {
+    max-width: 1024px;
+  }
+
   &__merch-headline {
     @include anchor;
     font-size: 1.7rem;
@@ -17,6 +55,15 @@
     }
 
     text-align: center;
+
+    a {
+      text-decoration: line-through !important;
+    }
+    
+    p {
+      color: firebrick;
+      text-decoration: none !important;
+    }
   }
 
   &__logo-container {

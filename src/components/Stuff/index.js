@@ -76,7 +76,9 @@ export default class Stuff extends Component {
               <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-8")}>Limited Edition "These Walls" T-Shirt</h4>
 
               <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-8 pb2")}>
-                <a href="mailto:luke@overeasyusa.com">email to order</a>
+                {/* <a href="mailto:luke@overeasyusa.com">email to order</a> */}
+                <a href="#">email to order</a>
+                {/* <p>sold out</p> */}
               </h4>
 
               <div className={cx("col-12 md:col-8")}>
@@ -104,16 +106,27 @@ export default class Stuff extends Component {
 
           </div>
 
-          <div className={cx("col-12 px1 md:px2 flex justify-center items-center mb8 flex-col md:flex-row")}>
+          <div className={cx("Stuff__merch-photo-container col-12 px1 md:px2 flex justify-center items-center mb8 flex-col")}>
 
-            <div className={cx("Stuff__merch-photo bg-color-white col-8 md:col-4 mr0 md:mr1 mb1 md:mb0")}>
+            <div className={cx("Stuff__merch-photo bg-color-white col-8 md:col-4 mr0 mb1 relative")}>
               <img className={cx("col-12")} src={this.props.merchPrimary.fields.file.url} alt="" />
               <p className="Stuff__merch-photo--paragraph-front text-center color-black pb_5">front</p>
+
+              <div className="Stuff__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
+                sold out
+              </div>
+
             </div>
 
-            <div className={cx("Stuff__merch-photo Stuff__merch-photo--back bg-color-white col-8 md:col-4 ml0 md:ml1")}>
+            <div className={cx("Stuff__merch-photo Stuff__merch-photo--back bg-color-white col-8 md:col-4 ml0 relative")}>
               <img className={cx("col-12")} src={this.props.merchSecondary.fields.file.url} alt="" />
+
               <p className="Stuff__merch-photo--paragraph-back text-center color-black pb_5">back</p>
+
+              <div className="Stuff__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
+                sold out
+              </div>
+
             </div>
             
           </div>
@@ -152,6 +165,12 @@ export default class Stuff extends Component {
           <SecondaryLogo
             src={this.props.secondaryLogo.fields.file.url}
           ></SecondaryLogo>
+
+          <div className="Stuff__sold-out-message headline-serif color-white absolute px2 py1">
+            sold out
+          </div>
+
+         
 
         </div>
       </div>
