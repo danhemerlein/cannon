@@ -8,9 +8,9 @@ import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
 import SecondaryLogo from 'components/SecondaryLogo';
 
-import './Stuff.scss'
+import './MerchPage.scss'
 
-export default class Stuff extends Component {
+export default class MerchPage extends Component {
 
   constructor(props) {
     super(props)
@@ -50,9 +50,9 @@ export default class Stuff extends Component {
 
   render() {
     return (
-      <div className="Stuff w100">
+      <div className="MerchPage w100">
 
-        <div className={cx("Stuff__bg bg-color-black h100 bg-cover flex flex-col relative justify-center items-center")}>
+        <div className={cx("bg-color-black h100 bg-cover flex flex-col relative justify-center items-center")}>
 
           <div className="flex w100 justify-between p1 md:p2">
 
@@ -60,7 +60,7 @@ export default class Stuff extends Component {
               src={this.props.logo.fields.file.url}>
             </MainLogo>
   
-            <div className={cx("Stuff__site-link")}>
+            <div className={cx("MerchPage__site-link")}>
               <Link to="/">
                 <h4 className={cx("headline-serif")}>home</h4>
               </Link>
@@ -69,13 +69,13 @@ export default class Stuff extends Component {
 
           </div>
 
-          <div className={cx("Stuff__merch col-8 md:col-10 px1 md:px2 flex items-center justify-center flex-col")}>
+          <div className={cx("MerchPage__merch col-8 md:col-10 px1 md:px2 flex items-center justify-center flex-col")}>
 
-            <div className={cx("Stuff__merch-headline--container flex items-center justify-center flex-col w100")}>
+            <div className={cx("MerchPage__merch-headline--container flex items-center justify-center flex-col w100")}>
             
-              <h4 className={cx("Stuff__merch-headline headline-serif color-white col-12 md:col-8")}>Limited Edition "These Walls" T-Shirt</h4>
+              <h4 className={cx("MerchPage__merch-headline headline-serif color-white col-12 md:col-8")}>Limited Edition "These Walls" T-Shirt</h4>
 
-              <h4 className={cx("Stuff__merch-headline headline-serif color-white underline col-12 md:col-8 pb2")}>
+              <h4 className={cx("MerchPage__merch-headline headline-serif color-white underline col-12 md:col-8 pb2")}>
                 {/* <a href="mailto:luke@overeasyusa.com">email to order</a> */}
                 <a href="#">email to order</a>
                 {/* <p>sold out</p> */}
@@ -83,9 +83,9 @@ export default class Stuff extends Component {
 
               <div className={cx("col-12 md:col-8")}>
 
-                <h4 className={cx("Stuff__merch-headline headline-serif color-white pb2")}>To complete the order, please include in your email: </h4>
+                <h4 className={cx("MerchPage__merch-headline headline-serif color-white pb2")}>To complete the order, please include in your email: </h4>
 
-                <ul className={cx("Stuff__merch-headline headline-serif color-white pb2")}> 
+                <ul className={cx("MerchPage__merch-headline headline-serif color-white pb2")}> 
                   <li className={cx("text-left w100 ml2 py_5 md:py0")}>
                     Size and quantity of shirts (S, M, L)
                   </li>
@@ -106,24 +106,24 @@ export default class Stuff extends Component {
 
           </div>
 
-          <div className={cx("Stuff__merch-photo-container col-12 px1 md:px2 flex justify-center items-center mb8 flex-col")}>
+          <div className={cx("MerchPage__merch-photo-container col-12 px1 md:px2 flex justify-center items-center mb8 flex-col")}>
 
-            <div className={cx("Stuff__merch-photo bg-color-white col-8 md:col-4 mr0 mb1 relative")}>
+            <div className={cx("MerchPage__merch-photo bg-color-white col-8 md:col-4 mr0 mb1 relative")}>
               <img className={cx("col-12")} src={this.props.merchPrimary.fields.file.url} alt="" />
-              <p className="Stuff__merch-photo--paragraph-front text-center color-black pb_5">front</p>
+              <p className="MerchPage__merch-photo--paragraph-front text-center color-black pb_5">front</p>
 
-              <div className="Stuff__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
+              <div className="MerchPage__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
                 sold out
               </div>
 
             </div>
 
-            <div className={cx("Stuff__merch-photo Stuff__merch-photo--back bg-color-white col-8 md:col-4 ml0 relative")}>
+            <div className={cx("MerchPage__merch-photo MerchPage__merch-photo--back bg-color-white col-8 md:col-4 ml0 relative")}>
               <img className={cx("col-12")} src={this.props.merchSecondary.fields.file.url} alt="" />
 
-              <p className="Stuff__merch-photo--paragraph-back text-center color-black pb_5">back</p>
+              <p className="MerchPage__merch-photo--paragraph-back text-center color-black pb_5">back</p>
 
-              <div className="Stuff__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
+              <div className="MerchPage__sold-out-message-two headline-serif color-white absolute px1 py_5 md:px2 md:py1">
                 sold out
               </div>
 
@@ -166,7 +166,7 @@ export default class Stuff extends Component {
             src={this.props.secondaryLogo.fields.file.url}
           ></SecondaryLogo>
 
-          <div className="Stuff__sold-out-message headline-serif color-white absolute px2 py1">
+          <div className="MerchPage__sold-out-message headline-serif color-white absolute px2 py1">
             sold out
           </div>
 

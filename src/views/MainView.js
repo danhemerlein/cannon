@@ -4,7 +4,7 @@ import get from "utils/get";
 
 import './MainView.scss'
 import HomePage from 'components/HomePage';
-import Stuff from 'components/Stuff';
+import MerchPage from 'components/MerchPage';
 import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
@@ -35,7 +35,7 @@ const MainView = ({ model }) => {
 
           <Route exact path="/t-shirt" render={() => (
 
-            <Stuff 
+            <MerchPage 
               backgroundImage={get(model, "fields.backgroundImage", {})}
               logo={get(model, "fields.logo", {})}
               secondaryLogo={get(model, "fields.secondaryLogo", {})}
