@@ -2,7 +2,9 @@
 
 .SecondaryLogo {
 
-  img {
+  bottom: 2rem;
+
+  &__img {
     -webkit-animation: rotating 12s linear infinite;
     -moz-animation: rotating 12s linear infinite;
     -ms-animation: rotating 12s linear infinite;
@@ -10,5 +12,7 @@
     animation: rotating 12s linear infinite;
   }
 
-  bottom: 2rem;
+  &__paragraph {
+    letter-spacing: -1px;
+  }
 }

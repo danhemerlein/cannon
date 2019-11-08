@@ -64,7 +64,11 @@ export default class HomePage extends Component {
               src={this.props.logo.fields.file.url}>
             </MainLogo>
 
-            <h1 className="HomePage__headline-one color-white futura">"STAN SMITHS" OUT NOW</h1>
+            <h1 className="HomePage__headline-one color-white futura text-center md:text-left mt2 md:mt0">
+              <a href="https://open.spotify.com/track/3aV6llTW0aRg0Db852uaC7?si=Nf6cDEH4Rfu5HnydVsWIUQ" target="_blank" rel="noopener noreferrer">
+                "STAN SMITHS" OUT NOW
+              </a>
+            </h1>
 
             {/* <div className="HomePage__site-link">
 

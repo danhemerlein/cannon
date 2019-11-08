@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import './SocialsModule.scss'
 import cx from 'classnames';
 
-import WaterGlass from 'components/Icons/WaterGlass';
-
+// import WaterGlass from 'components/Icons/WaterGlass';
+import Shoe from 'components/Icons/Shoe';
 
 export default class SocialsModule extends Component {
 
@@ -44,10 +44,10 @@ export default class SocialsModule extends Component {
               <a href="https://www.facebook.com/cannonsmusic/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
             </li>
 
-            <li className={cx("SocialsModule__nav--list-item SocialsModule__nav--list-item-svg flex flex-col relative items-end")}>
-              <a href="https://open.spotify.com/track/4P5d7lMNGqMPcVBn994Lbp?si=lxlB9FUqRHupxW7IGDSzgQ" target="_blank" rel="noopener noreferrer" className="block"><WaterGlass></WaterGlass></a>
+            <li className={cx("SocialsModule__nav--list-item SocialsModule__nav--list-item-svg flex flex-col relative ")}>
+              <a href="https://open.spotify.com/track/3aV6llTW0aRg0Db852uaC7?si=pBgl16jaTDKZQMicCllVBg" target="_blank" rel="noopener noreferrer" className="block"><Shoe></Shoe></a>
 
-              <span className="SocialsModule__nav--list-item-svg-cta color-white text-center futura">Water Glass<br></br> out now</span>
+              {/* <span className="SocialsModule__nav--list-item-svg-cta color-white text-center futura">Water Glass<br></br> out now</span> */}
             </li>
          
           </ul>
