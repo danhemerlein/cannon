@@ -3,7 +3,7 @@
 .SocialsModule {
 
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 
   &__nav {
     
@@ -25,14 +25,22 @@
         a {
           text-decoration: none;
           font-size: 2.5rem;
-          color: map-get($colors, "black");
+          color: map-get($colors, "white");
         }
 
         a:active {
-          color: map-get($colors, "black");
+          color: map-get($colors, "white");
         }
         
         a:visited {
+          color: map-get($colors, "white");
+        }
+
+        svg {
+          fill: map-get($colors, "white");
+        }
+
+        a:hover {
           color: map-get($colors, "black");
         }
 
@@ -41,8 +49,9 @@
             transform: scale(1);
 
             .SocialsModule__nav--list-item-cta {
-              width: 125%;
+              width: -500%;
               visibility: visible;
+
               -webkit-animation: fadein $transition-duration-ultra-short;
               -moz-animation: fadein $transition-duration-ultra-short;
               -ms-animation: fadein $transition-duration-ultra-short;
@@ -50,16 +59,22 @@
               animation: fadein $transition-duration-ultra-short;
               animation-timing-function: cubic-bezier(0.25, 0.2, 0, 1);
             }
+
+            svg {
+              fill: map-get($colors, "black") !important;
+            }
+
           }
         }
       }
-
+    
     &--list-item-cta {
-      top: 50%;
-      right: 75%;
+      top: 100%;
+      right: 100%;
       transform: translate(-50%, -50%) scale(1);
       transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
       visibility: hidden;
+      cursor: pointer;
       width: 0;
       font-size: 1.75rem;
     }

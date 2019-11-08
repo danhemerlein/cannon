@@ -8,7 +8,7 @@ export default class MainLogo extends Component {
 
   render() {
     return (
-      <div className={cx("MainLogo flex w100 col-3 md:col-2")}>
+      <div className={cx("MainLogo flex w100 col-3 md:col-5")}>
         <Link to="/">
           <img className={cx("w100")} src={this.props.src} alt="" />
         </Link>

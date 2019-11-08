@@ -1,11 +1,14 @@
 @import "../../styles/app.scss";
 
 .SecondaryLogo {
-  bottom: 1rem;
-  left: 1rem;
 
-  @media (min-width: 640px) {
-    margin-top: 1rem;
-    margin-left: 1rem;
+  img {
+    -webkit-animation: rotating 12s linear infinite;
+    -moz-animation: rotating 12s linear infinite;
+    -ms-animation: rotating 12s linear infinite;
+    -o-animation: rotating 12s linear infinite;
+    animation: rotating 12s linear infinite;
   }
+
+  bottom: 2rem;
 }

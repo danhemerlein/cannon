@@ -2,6 +2,7 @@
 
 .HomePage {
 
+  height: 100vh;
   overflow-x: hidden;
 
   &__close-x {
@@ -18,10 +19,9 @@
     background-attachment: fixed;
   }
 
-  &__headline-one {
-    font-size: 4rem;
-    cursor: default;
-    
+ &__headline-one {
+    font-size: 3rem;
+    letter-spacing: -3px;
   }
   
   &__headline-three {
@@ -73,9 +73,9 @@
   }
 
   &__social-container {
-    top: 25%;
-    right: 2rem;
-    transform: translateY(-25%);
+    top: 2rem;
+    left: 2rem;
+    // transform: translateY(-50%);
     width: 300px;
 
     &--desktop {
@@ -93,13 +93,13 @@
       background: #000000BF;
       width: 200px;
       z-index: 1;
-      right: 0;
+      left: 0;
       top: 0;
       height: 100vh;
       transition: transform 2s cubic-bezier(0.25, 0.2, 0, 1);
 
       &--hide {
-        transform: translate(100%, 0);
+        transform: translate(-100%, 0);
         cursor: pointer;
       }
       

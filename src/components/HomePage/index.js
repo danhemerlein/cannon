@@ -48,20 +48,25 @@ export default class HomePage extends Component {
 
   render() {      
     const backgroundImage = {
-      backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")"
+      backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
     };
 
     return (
       <div className={cx("HomePage w100")}>
-        <div style={backgroundImage} className={cx("HomePage__image1 h100 flex bg-cover flex-col relative")}>
+        <div style={backgroundImage} className={cx("HomePage__image1 h100 flex flex-col relative")}>
 
-          <div className="flex w100 justify-between p1 md:p2 mb8">
+          <div className="flex w100 justify-end p1 md:p2 flex-col items-end">
 
             <MainLogo
               src={this.props.logo.fields.file.url}>
             </MainLogo>
 
-            <div className="HomePage__site-link">
+            <h1 className="HomePage__headline-one color-white futura">"STAN SMITHS" OUT NOW</h1>
+
+            {/* <div className="HomePage__site-link">
 
               <Link to="/t-shirt">
               
@@ -83,11 +88,11 @@ export default class HomePage extends Component {
 
               </Link>
 
-            </div>
+            </div> */}
 
           </div>
 
-          <div className={cx("HomePage__headline-center-container flex justify-center flex-col text-center mt8 mb4 p1 md:p2")}>
+          {/* <div className={cx("HomePage__headline-center-container flex justify-center flex-col text-center mt8 mb4 p1 md:p2")}>
             <h3 className={cx("HomePage__headline-three headline-serif bold color-white inline-block")}>  
               <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
                 {this.props.footerTitle}
@@ -99,9 +104,9 @@ export default class HomePage extends Component {
                 Lyric Video Out Now
               </a>
             </h6>
-          </div>
+          </div> */}
 
-          <div className="HomePage__container-iframe w100 flex justify-center">
+          {/* <div className="HomePage__container-iframe w100 flex justify-center">
 
             <iframe className="col-12 p1 md:p2 mb8" title="These Walls Lyric Video" src="https://www.youtube.com/embed/wNESoi5Ty2Q" frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="allowfullscreen"
@@ -110,7 +115,7 @@ export default class HomePage extends Component {
               oallowfullscreen="oallowfullscreen"
               webkitallowfullscreen="webkitallowfullscreen"></iframe>
 
-          </div>
+          </div> */}
 
           <div className={cx("HomePage__social-toggle absolute",
             { 'HomePage__social-toggle--nav-open': this.state.navOpen === true }, {'HomePage__social-toggle--nav-closed': this.state.navOpen === false }
@@ -133,7 +138,7 @@ export default class HomePage extends Component {
 
           </div>
 
-          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute flex flex-col", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
+          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute flex-col", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
 
        
             <SocialsModule

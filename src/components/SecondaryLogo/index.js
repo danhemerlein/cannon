@@ -7,8 +7,8 @@ export default class SecondaryLogo extends Component {
 
   render() {
     return (
-      <div className={cx("SecondaryLogo absolute md:col-1 col-2")}>
-        <img className={cx("w100")} src={this.props.src} alt="" />
+      <div className={cx("SecondaryLogo flex justify-end absolute w100")}>
+        <img className={cx("md:col-1 col-2 mr2")} src={this.props.src} alt="" />
       </div>
     )
   }
