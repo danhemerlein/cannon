@@ -109,7 +109,7 @@ export default class MerchPage extends Component {
                   </li>
                   <li className={cx("text-left w100 ml2 md:py0")}>
                     Venmo Luke Doyle (@overeasymusic) total amount of order
-                    ($25/shirt + $5 shipping)
+                    ($25/shirt + $5 shipping & handling)
                   </li>
                   <li className={cx("text-left w100 ml2 md:py0")}>
                     Upon receipt, order will be shipped in 3-5 business days
