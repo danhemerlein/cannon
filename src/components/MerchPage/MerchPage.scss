@@ -5,7 +5,18 @@
   overflow-x: hidden;
 
   ul {
-    list-style: circle;
+  }
+
+  &__main-logo-container {
+    align-items: center;
+
+    .MainLogo {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 620px) {
+      align-items: initial;
+    }
   }
 
   &__sold-out-message {
@@ -26,7 +37,7 @@
     background: firebrick;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     transform-origin: center center;
 
     @media (min-width: 620px) {
@@ -35,12 +46,12 @@
 
   }
 
-  &__merch {
+  &__merch, &__merch-photo-container {
     max-width: 1024px;
   }
-  
-  &__merch-photo-container {
-    max-width: 1024px;
+
+  &__merch-unordered-list {
+    list-style: circle;
   }
 
   &__merch-headline {
@@ -53,14 +64,14 @@
 
     text-align: center;
 
-    a {
-      text-decoration: line-through !important;
-    }
-    
-    p {
-      color: firebrick;
-      text-decoration: none !important;
-    }
+    // a {
+    //   text-decoration: line-through !important;
+    // }
+
+    // p {
+    //   color: firebrick;
+    //   text-decoration: none !important;
+    // }
   }
 
   &__logo-container {
@@ -77,33 +88,11 @@
     @include anchor;
     top: 2rem;
     right: 2rem;
-    font-size: 1.5rem;   
+    font-size: 1.5rem;
   }
 
-  &__merch-photo {
-
-    img {
-      height: 13rem;
-
-      @media (min-width: 500px) {
-        height: 15rem;
-      }
-
-       @media (min-width: 1024px) {
-        height: 20rem;
-      }
-    }
-
-    &--paragraph-front {
-      font-size: 1.5rem;
-      margin-right: 1.1rem;
-    }
-
-    &--paragraph-back {
-      font-size: 1.5rem;
-      margin-left: 1.1rem;
-    }
-
+  &__merch-photo-paragraph {
+    font-size: 1.5rem;
   }
 
   &__social-container {

@@ -9,7 +9,7 @@ import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
-    
+
   return (
     <div className="App">
       <Router>
@@ -33,9 +33,9 @@ const MainView = ({ model }) => {
 
           )} />
 
-          <Route exact path="/t-shirt" render={() => (
+          <Route exact path="/merch" render={() => (
 
-            <MerchPage 
+            <MerchPage
               backgroundImage={get(model, "fields.backgroundImage", {})}
               logo={get(model, "fields.logo", {})}
               secondaryLogo={get(model, "fields.secondaryLogo", {})}

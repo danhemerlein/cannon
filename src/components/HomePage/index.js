@@ -46,7 +46,7 @@ export default class HomePage extends Component {
     });
   }
 
-  render() {      
+  render() {
     const backgroundImage = {
       backgroundImage: "url(" + this.props.backgroundImage.fields.file.url + ")",
       backgroundPosition: "center",
@@ -56,24 +56,23 @@ export default class HomePage extends Component {
 
     return (
       <div className={cx("HomePage w100")}>
-        <div style={backgroundImage} className={cx("HomePage__image1 h100 flex flex-col relative")}>
-
+        <div
+          style={backgroundImage}
+          className={cx("HomePage__image1 h100 flex flex-col relative")}
+        >
           <div className="flex w100 justify-end p1 md:p2 flex-col items-end">
+            <MainLogo src={this.props.logo.fields.file.url}></MainLogo>
 
-            <MainLogo
-              src={this.props.logo.fields.file.url}>
-            </MainLogo>
-
-            <h1 className="HomePage__headline-one color-white futura text-center md:text-left mt2 md:mt0">
-              <a href="https://open.spotify.com/track/3aV6llTW0aRg0Db852uaC7?si=Nf6cDEH4Rfu5HnydVsWIUQ" target="_blank" rel="noopener noreferrer">
-                "STAN SMITHS" OUT NOW
-              </a>
+            <h1 className="HomePage__headline-one color-white futura mt2 md:mt0 text-center sm:text-right underline">
+              <Link to="/merch">
+                “Words Are Important” <br></br>Long-Sleeve Tee<br></br>available now
+              </Link>
             </h1>
 
             {/* <div className="HomePage__site-link">
 
               <Link to="/t-shirt">
-              
+
                 <div className={cx("HomePage__site-link flex flex-col color-white")}>
                   <h4 className={cx("relative headline-serif")}>Limited Edition</h4>
 
@@ -93,11 +92,10 @@ export default class HomePage extends Component {
               </Link>
 
             </div> */}
-
           </div>
 
           {/* <div className={cx("HomePage__headline-center-container flex justify-center flex-col text-center mt8 mb4 p1 md:p2")}>
-            <h3 className={cx("HomePage__headline-three headline-serif bold color-white inline-block")}>  
+            <h3 className={cx("HomePage__headline-three headline-serif bold color-white inline-block")}>
               <a href="https://open.spotify.com/track/3o2qklLlYRiHUYByBfoFl5?si=yeaTZeqOQI-q6qegdjMiLA" target="_blank" rel="noopener noreferrer">
                 {this.props.footerTitle}
               </a>
@@ -121,45 +119,61 @@ export default class HomePage extends Component {
 
           </div> */}
 
-          <div className={cx("HomePage__social-toggle absolute",
-            { 'HomePage__social-toggle--nav-open': this.state.navOpen === true }, {'HomePage__social-toggle--nav-closed': this.state.navOpen === false }
-          )}>
-
-              <SocialToggle
-                clickHandler={this.toggleNav}
-                navOpen={this.state.navOpen}
-              ></SocialToggle>
-
+          <div
+            className={cx(
+              "HomePage__social-toggle absolute",
+              {
+                "HomePage__social-toggle--nav-open": this.state.navOpen === true
+              },
+              {
+                "HomePage__social-toggle--nav-closed":
+                  this.state.navOpen === false
+              }
+            )}
+          >
+            <SocialToggle
+              clickHandler={this.toggleNav}
+              navOpen={this.state.navOpen}
+            ></SocialToggle>
           </div>
 
-          <div className={cx("HomePage__social-container HomePage__social-container--desktop self-end absolute")}>
-
-            <SocialsModule 
-              soundLinkCTA={this.props.soundLinkCTA}
-              instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twitterLinkCTA}
-            />
-
-          </div>
-
-          <div className={cx("HomePage__social-container HomePage__social-container--mobile self-end absolute flex-col", { 'HomePage__social-container--mobile--show': this.state.navOpen === true }, { 'HomePage__social-container--mobile--hide': this.state.navOpen === false })}>
-
-       
+          <div
+            className={cx(
+              "HomePage__social-container HomePage__social-container--desktop self-end absolute"
+            )}
+          >
             <SocialsModule
               soundLinkCTA={this.props.soundLinkCTA}
               instagramLinkCTA={this.props.instagramLinkCTA}
               twitterLinkCTA={this.props.twitterLinkCTA}
             />
+          </div>
 
+          <div
+            className={cx(
+              "HomePage__social-container HomePage__social-container--mobile self-end absolute flex-col",
+              {
+                "HomePage__social-container--mobile--show":
+                  this.state.navOpen === true
+              },
+              {
+                "HomePage__social-container--mobile--hide":
+                  this.state.navOpen === false
+              }
+            )}
+          >
+            <SocialsModule
+              soundLinkCTA={this.props.soundLinkCTA}
+              instagramLinkCTA={this.props.instagramLinkCTA}
+              twitterLinkCTA={this.props.twitterLinkCTA}
+            />
           </div>
 
           <SecondaryLogo
             src={this.props.secondaryLogo.fields.file.url}
           ></SecondaryLogo>
-
         </div>
-
       </div>
-    )
+    );
   }
 }
