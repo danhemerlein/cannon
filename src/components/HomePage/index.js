@@ -54,20 +54,48 @@ export default class HomePage extends Component {
       backgroundSize: "cover",
     };
 
+    const heroImage = {
+      backgroundImage: "url(" + this.props.heroImage.fields.file.url + ")",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover"
+    };
+
     return (
       <div className={cx("HomePage w100")}>
         <div
           style={backgroundImage}
           className={cx("HomePage__image1 h100 flex flex-col relative")}
         >
-          <div className="flex w100 justify-end p1 md:p2 flex-col items-end">
-            {/* <MainLogo src={this.props.logo.fields.file.url}></MainLogo> */}
+          <div className="flex w100 p1 md:p2 flex-col">
+            <ul className="HomePage__unorderd-list flex">
+              <li className="HomePage__list-item  mr2">
+                <Link to="/">HOME</Link>
+              </li>
+              <li className="HomePage__list-item  mx2">
+                <Link to="/merch">MERCH</Link>
+              </li>
+              <li className="HomePage__list-item  mx2">
+                <Link to="/">MUSIC</Link>
+              </li>
+              <li className="HomePage__list-item  mx2">
+                <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
+              </li>
+            </ul>
 
-            {/* <h1 className="HomePage__headline-one color-white futura mt2 md:mt0 text-center sm:text-right underline">
-              <Link to="/merch">
-                “Words Are Important” <br></br>Long-Sleeve Tee<br></br>available now
-              </Link>
-            </h1>   */}
+            <div className="col-12 relative">
+              <div className="content col-11">
+                <div style={heroImage} className="two-one"></div>
+              </div>
+
+              <div
+                className={cx(
+                  "HomePage__social-container HomePage__social-container--desktop absolute h100 col-1"
+                )}
+              >
+                <SocialsModule />
+              </div>
+            </div>
           </div>
 
           <div
@@ -90,18 +118,6 @@ export default class HomePage extends Component {
 
           <div
             className={cx(
-              "HomePage__social-container HomePage__social-container--desktop self-end absolute"
-            )}
-          >
-            <SocialsModule
-              soundLinkCTA={this.props.soundLinkCTA}
-              instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twitterLinkCTA}
-            />
-          </div>
-
-          <div
-            className={cx(
               "HomePage__social-container HomePage__social-container--mobile self-end absolute flex-col",
               {
                 "HomePage__social-container--mobile--show":
@@ -113,11 +129,15 @@ export default class HomePage extends Component {
               }
             )}
           >
-            <SocialsModule
-              soundLinkCTA={this.props.soundLinkCTA}
-              instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twitterLinkCTA}
-            />
+            <SocialsModule />
+          </div>
+
+          <div className="HomePage__cta-container  absolute  flex  justify-center items-center">
+            <img src={this.props.convoImage.fields.file.url} alt="" />
+
+            <h3 className="text-center  ml1  droid">
+              Converstations<br></br> Out Everywhere!
+            </h3>
           </div>
 
           <SecondaryLogo

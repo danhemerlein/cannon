@@ -10,95 +10,39 @@
     margin-top: 0;
   }
 
-  &__nav {
-
-    &--list-item {
-
-        justify-content: flex-end;
-
-        svg {
-          width: 30px !important;
-          fill: map-get($colors, "black");
-
-          path {
-            fill: map-get($colors, "black");
-          }
-
-          @media (min-width: 640px) {
-            width: 40px !important;
-          }
-        }
-
-        transform: scale(0.85);
-        transition: transform $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
-
-        a {
-          text-decoration: none;
-          font-size: 2.5rem;
-          color: map-get($colors, "white");
-        }
-
-        a:active {
-          color: map-get($colors, "white");
-        }
-
-        a:visited {
-          color: map-get($colors, "white");
-        }
-
-        a:hover {
-          color: map-get($colors, "black");
-        }
-
-        @media ($medium-up) {
-          &:hover {
-            transform: scale(1);
-
-            .SocialsModule__nav--list-item-cta {
-              width: -500%;
-              visibility: visible;
-
-              -webkit-animation: fadein $transition-duration-ultra-short;
-              -moz-animation: fadein $transition-duration-ultra-short;
-              -ms-animation: fadein $transition-duration-ultra-short;
-              -o-animation: fadein $transition-duration-ultra-short;
-              animation: fadein $transition-duration-ultra-short;
-              animation-timing-function: cubic-bezier(0.25, 0.2, 0, 1);
-            }
-
-            svg {
-              fill: map-get($colors, "black") !important;
-            }
-
-          }
-        }
-      }
-
-    &--list-item-cta {
-      top: 100%;
-      right: 100%;
-      transform: translate(-50%, -50%) scale(1);
-      transition: width $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
-      visibility: hidden;
-      cursor: pointer;
-      width: 0;
-      font-size: 1.75rem;
-    }
+  &__unordered-list {
+    width: 40px;
   }
 
-  &__nav--list-item-svg {
-    justify-content: flex-end;
-    display: flex;
-    align-items: center;
-
-    @media (min-width: 640px) {
-      align-items: flex-end;
-    }
+   &__list-item {
+    width: 50%;
+    margin: 0 auto;
 
     svg {
-      width: 50px;
-      fill: map-get($colors, "white");
+      width: 30px !important;
+      fill: map-get($colors, "black");
+
+      path {
+        fill: map-get($colors, "black");
+      }
+
+      @media (min-width: 640px) {
+        width: 100% !important;
+      }
     }
 
+    transition: transform $transition-duration-ultra-short cubic-bezier(0.25, 0.2, 0, 1);
+
+    a:hover {
+      color: map-get($colors, "black");
+    }
+
+    a {
+      display: block;
+    }
+
+    .svg-inline--fa {
+      height: auto !important;
+    }
   }
 }

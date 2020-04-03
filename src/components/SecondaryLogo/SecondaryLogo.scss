@@ -5,11 +5,13 @@
   bottom: 2rem;
 
   &__img {
-    -webkit-animation: rotating 12s linear infinite;
-    -moz-animation: rotating 12s linear infinite;
-    -ms-animation: rotating 12s linear infinite;
-    -o-animation: rotating 12s linear infinite;
-    animation: rotating 12s linear infinite;
+    width: 11rem;
+
+    // -webkit-animation: rotating 12s linear infinite;
+    // -moz-animation: rotating 12s linear infinite;
+    // -ms-animation: rotating 12s linear infinite;
+    // -o-animation: rotating 12s linear infinite;
+    // animation: rotating 12s linear infinite;
   }
 
   &__paragraph {
