@@ -69,20 +69,20 @@ export default class HomePage extends Component {
         >
           <div className="flex w100 p1 md:p2 flex-col">
             <ul className="HomePage__unoderded-list flex mb1">
-              <li className="HomePage__list-item droid mr2">
+              <li className="HomePage__list-item droid md:mr2">
                 <Link to="/">HOME</Link>
               </li>
-              <li className="HomePage__list-item droid mx2 ">
+              <li className="HomePage__list-item droid md:mx2">
                 <Link to="/merch">MERCH</Link>
               </li>
               {/* <li className="HomePage__list-item  mx2">
                 <Link to="/">MUSIC</Link>
               </li> */}
-              <li className="HomePage__list-item droid  mx2">
+              <li className="HomePage__list-item droid  md:mx2">
                 <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
               </li>
 
-              <li className="HomePage__list-item droid  ml2  block md:none">
+              <li className="HomePage__list-item droid   block md:none">
                 <button className="droid" onClick={this.toggleNav}>
                   SOCIALS
                 </button>
