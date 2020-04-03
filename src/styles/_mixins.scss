@@ -1,22 +1,22 @@
 @mixin anchor {
   a {
     text-decoration: none;
-    color: map-get($colors, "white");
+    color: map-get($colors, "black");
     height: 100%;
 
     &:visited {
       text-decoration: none;
-      color: map-get($colors, "white");
+      color: map-get($colors, "black");
     }
 
     &:active {
       text-decoration: none;
-      color: map-get($colors, "white");
+      color: map-get($colors, "black");
     }
-    
+
     &:hover {
-      text-decoration: none;
-      color: map-get($colors, "white");
+      text-decoration: underline;
+      color: map-get($colors, "black");
     }
   }
 }

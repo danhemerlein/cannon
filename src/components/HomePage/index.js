@@ -36,14 +36,14 @@ export default class HomePage extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.closeNav);
 
-    const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
+    // const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
-    AveraSans.load().then(function (loadedHand) {
-      document.fonts.add(loadedHand);
-      document.body.style.fontFamily = '"AveraSans", sans-serif';
-    }).catch(function (error) {
-      console.error('an error occured while loading the font');
-    });
+    // AveraSans.load().then(function (loadedHand) {
+    //   document.fonts.add(loadedHand);
+    //   document.body.style.fontFamily = '"AveraSans", sans-serif';
+    // }).catch(function (error) {
+    //   console.error('an error occured while loading the font');
+    // });
   }
 
   render() {
@@ -68,29 +68,36 @@ export default class HomePage extends Component {
           className={cx("HomePage__image1 h100 flex flex-col relative")}
         >
           <div className="flex w100 p1 md:p2 flex-col">
-            <ul className="HomePage__unorderd-list flex">
-              <li className="HomePage__list-item  mr2">
+            <ul className="HomePage__unorderd-list flex mb1 ">
+              <li className="HomePage__list-item droid mr2">
                 <Link to="/">HOME</Link>
               </li>
-              <li className="HomePage__list-item  mx2">
+              <li className="HomePage__list-item droid mx2 ">
                 <Link to="/merch">MERCH</Link>
               </li>
-              <li className="HomePage__list-item  mx2">
+              {/* <li className="HomePage__list-item  mx2">
                 <Link to="/">MUSIC</Link>
-              </li>
-              <li className="HomePage__list-item  mx2">
+              </li> */}
+              <li className="HomePage__list-item droid  mx2">
                 <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
+              </li>
+
+              <li className="HomePage__list-item droid  mx2  block md:none">
+                <button className="droid" onClick={this.toggleNav}>
+                  SOCIALS
+                </button>
               </li>
             </ul>
 
             <div className="col-12 relative">
-              <div className="content col-11">
+              <div className="content col-12 md:col-11">
                 <div style={heroImage} className="two-one"></div>
+                {/* <div style={heroImage} className="block md:nonde md:three-four"></div> */}
               </div>
 
               <div
                 className={cx(
-                  "HomePage__social-container HomePage__social-container--desktop absolute h100 col-1"
+                  "HomePage__social-container HomePage__social-container--desktop absolute h100 col-1 none md:block"
                 )}
               >
                 <SocialsModule />
@@ -98,7 +105,7 @@ export default class HomePage extends Component {
             </div>
           </div>
 
-          <div
+          {/* <div
             className={cx(
               "HomePage__social-toggle absolute",
               {
@@ -114,7 +121,7 @@ export default class HomePage extends Component {
               clickHandler={this.toggleNav}
               navOpen={this.state.navOpen}
             ></SocialToggle>
-          </div>
+          </div> */}
 
           <div
             className={cx(
@@ -136,7 +143,13 @@ export default class HomePage extends Component {
             <img src={this.props.convoImage.fields.file.url} alt="" />
 
             <h3 className="text-center  ml1  droid">
-              Converstations<br></br> Out Everywhere!
+              <a
+                href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Converstations<br></br> Out Everywhere!
+              </a>
             </h3>
           </div>
 

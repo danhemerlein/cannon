@@ -10,10 +10,10 @@ export default class SocialsModule extends Component {
       <div className={cx("SocialsModule h100")}>
         <ul
           className={cx(
-            "SocialsModule__unordered-list flex flex-col justify-between col-12 items-center"
+            "SocialsModule__unordered-list flex flex-col justify-center md:justify-between col-12 items-center"
           )}
         >
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://music.apple.com/us/album/these-walls-single/1472250194?app=itunes&ign-mpt=uo%3D4"
               target="_blank"
@@ -23,7 +23,7 @@ export default class SocialsModule extends Component {
             </a>
           </li>
 
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://open.spotify.com/track/4P5d7lMNGqMPcVBn994Lbp?si=pMUT-nPHSX-DRDsYz54cuw"
               target="_blank"
@@ -33,7 +33,7 @@ export default class SocialsModule extends Component {
             </a>
           </li>
 
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://soundcloud.com/user-912011581/waterglass"
               target="_blank"
@@ -43,7 +43,7 @@ export default class SocialsModule extends Component {
             </a>
           </li>
 
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://www.youtube.com/watch?v=CvCBDXDlSws&list=OLAK5uy_mDubMovuLaZSTSHPz05dU6kwpbKk7bSTo"
               target="_blank"
@@ -53,7 +53,7 @@ export default class SocialsModule extends Component {
             </a>
           </li>
 
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://www.instagram.com/cannonfew/"
               target="_blank"
@@ -63,7 +63,7 @@ export default class SocialsModule extends Component {
             </a>
           </li>
 
-          <li className={cx("SocialsModule__list-item mb_5")}>
+          <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
               href="https://twitter.com/cannon_few"
               target="_blank"
