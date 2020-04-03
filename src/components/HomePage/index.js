@@ -68,7 +68,7 @@ export default class HomePage extends Component {
           className={cx("HomePage__image1 h100 flex flex-col relative")}
         >
           <div className="flex w100 p1 md:p2 flex-col">
-            <ul className="HomePage__unorderd-list flex mb1 ">
+            <ul className="HomePage__unoderded-list flex mb1">
               <li className="HomePage__list-item droid mr2">
                 <Link to="/">HOME</Link>
               </li>
@@ -82,7 +82,7 @@ export default class HomePage extends Component {
                 <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
               </li>
 
-              <li className="HomePage__list-item droid  mx2  block md:none">
+              <li className="HomePage__list-item droid  ml2  block md:none">
                 <button className="droid" onClick={this.toggleNav}>
                   SOCIALS
                 </button>
@@ -148,7 +148,7 @@ export default class HomePage extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Converstations<br></br> Out Everywhere!
+                CONVERSATIONS<br></br>OUT EVERYWHERE!
               </a>
             </h3>
           </div>

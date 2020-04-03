@@ -12,6 +12,11 @@
   }
 
   &__unoderded-list {
+    justify-content: space-between;
+
+    @media (min-width: 830px) {
+      justify-content: unset;
+    }
   }
 
   &__list-item {
