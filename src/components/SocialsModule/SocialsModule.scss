@@ -1,9 +1,8 @@
 @import "../../styles/app.scss";
 
 .SocialsModule {
-
   display: flex;
-  // justify-content: flex-end;
+  justify-content: flex-end;
 
   margin-top: 2rem;
 
@@ -12,13 +11,18 @@
   }
 
   &__nav {
-    
+
     &--list-item {
-      
+
         justify-content: flex-end;
 
         svg {
           width: 30px !important;
+          fill: map-get($colors, "black");
+
+          path {
+            fill: map-get($colors, "black");
+          }
 
           @media (min-width: 640px) {
             width: 40px !important;
@@ -37,13 +41,9 @@
         a:active {
           color: map-get($colors, "white");
         }
-        
+
         a:visited {
           color: map-get($colors, "white");
-        }
-
-        svg {
-          fill: map-get($colors, "white");
         }
 
         a:hover {
@@ -73,7 +73,7 @@
           }
         }
       }
-    
+
     &--list-item-cta {
       top: 100%;
       right: 100%;
@@ -90,7 +90,7 @@
     justify-content: flex-end;
     display: flex;
     align-items: center;
-    
+
     @media (min-width: 640px) {
       align-items: flex-end;
     }
@@ -99,9 +99,6 @@
       width: 50px;
       fill: map-get($colors, "white");
     }
-    
+
   }
 }
-
-
-
