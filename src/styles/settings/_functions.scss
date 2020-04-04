@@ -20,3 +20,14 @@
     }
   }
 }
+
+/*------------------------------------*\
+  #COMMON-BP
+\*------------------------------------*/
+
+@mixin common-bp($point) {
+
+	@media #{map-get($common-media-queries, $point)}{
+		@content;
+	}
+}

@@ -75,9 +75,9 @@ export default class HomePage extends Component {
               <li className="HomePage__list-item droid md:mx2">
                 <Link to="/merch">MERCH</Link>
               </li>
-              {/* <li className="HomePage__list-item  mx2">
-                <Link to="/">MUSIC</Link>
-              </li> */}
+              <li className="HomePage__list-item  mx2">
+                <Link to="/music">MUSIC</Link>
+              </li>
               <li className="HomePage__list-item droid  md:mx2">
                 <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
               </li>
@@ -92,7 +92,6 @@ export default class HomePage extends Component {
             <div className="col-12 relative">
               <div className="content col-12 md:col-11">
                 <div style={heroImage} className="two-one"></div>
-                {/* <div style={heroImage} className="block md:nonde md:three-four"></div> */}
               </div>
 
               <div
@@ -104,24 +103,6 @@ export default class HomePage extends Component {
               </div>
             </div>
           </div>
-
-          {/* <div
-            className={cx(
-              "HomePage__social-toggle absolute",
-              {
-                "HomePage__social-toggle--nav-open": this.state.navOpen === true
-              },
-              {
-                "HomePage__social-toggle--nav-closed":
-                  this.state.navOpen === false
-              }
-            )}
-          >
-            <SocialToggle
-              clickHandler={this.toggleNav}
-              navOpen={this.state.navOpen}
-            ></SocialToggle>
-          </div> */}
 
           <div
             className={cx(
