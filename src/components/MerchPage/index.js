@@ -90,10 +90,11 @@ export default class MerchPage extends Component {
               <div className={cx("col-12 md:col-8")}>
                 <h4
                   className={cx(
-                    "MerchPage__merch-headline headline-serif color-white pb2"
+                    "MerchPage__merch-headline headline-serif color-white pb1"
                   )}
                 >
-                  To complete the order, please include in your email:{" "}
+                  <span className="block md:none">To complete the order, <br></br>please include in your email:{" "}</span>
+                  <span className="none md:block">To complete the order, please include in your email:{" "}</span>
                 </h4>
 
                 <ul
@@ -101,17 +102,17 @@ export default class MerchPage extends Component {
                     "MerchPage__merch-headline MerchPage__merch-unordered-list headline-serif color-white pb2"
                   )}
                 >
-                  <li className={cx("text-left w100 ml2 py_5 md:py0")}>
+                  <li className={cx("text-left w100 ml2 my1 md:py0 pr2 md:pr0")}>
                     Size and quantity of shirts (S, M, L, XL)
                   </li>
-                  <li className={cx("text-left w100 ml2 md:py0")}>
+                  <li className={cx("text-left w100 ml2 my1 md:py0 pr2 md:pr0")}>
                     Your shipping address
                   </li>
-                  <li className={cx("text-left w100 ml2 md:py0")}>
+                  <li className={cx("text-left w100 ml2 my1 md:py0 pr2 md:pr0")}>
                     Venmo Luke Doyle (@overeasymusic) total amount of order
                     ($25/shirt + $5 shipping & handling)
                   </li>
-                  <li className={cx("text-left w100 ml2 md:py0")}>
+                  <li className={cx("text-left w100 ml2 my1 md:py0 pr2 md:pr0")}>
                     Upon receipt, order will be shipped in 3-5 business days
                     (email confirmation)
                   </li>
