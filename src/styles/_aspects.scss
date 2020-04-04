@@ -6,7 +6,7 @@
     width: 100%;
     padding-top: 80%;
 
-    @media (min-width: 640px) {
+    @media (min-width: 520px) {
       padding-top: ($height / $width) * 100%;
     }
   }

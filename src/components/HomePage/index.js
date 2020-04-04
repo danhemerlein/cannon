@@ -75,17 +75,17 @@ export default class HomePage extends Component {
               <li className="HomePage__list-item droid md:mx2">
                 <Link to="/merch">MERCH</Link>
               </li>
-              <li className="HomePage__list-item  mx2">
+              <li className="HomePage__list-item droid md:mx2">
                 <Link to="/music">MUSIC</Link>
               </li>
-              <li className="HomePage__list-item droid  md:mx2">
+              <li className="HomePage__list-item droid md:mx2">
                 <a href="mailto:cannonsmgmt@gmail.com">CONTACT</a>
               </li>
 
-              <li className="HomePage__list-item droid   block md:none">
-                <button className="droid" onClick={this.toggleNav}>
+              <li className="HomePage__list-item block md:none">
+                <a href="#" className="droid" onClick={this.toggleNav}>
                   SOCIALS
-                </button>
+                </a>
               </li>
             </ul>
 
@@ -109,11 +109,11 @@ export default class HomePage extends Component {
               "HomePage__social-container HomePage__social-container--mobile self-end absolute flex-col",
               {
                 "HomePage__social-container--mobile--show":
-                  this.state.navOpen === true
+                  this.state.navOpen === true,
               },
               {
                 "HomePage__social-container--mobile--hide":
-                  this.state.navOpen === false
+                  this.state.navOpen === false,
               }
             )}
           >
@@ -121,17 +121,22 @@ export default class HomePage extends Component {
           </div>
 
           <div className="HomePage__cta-container  absolute  flex  justify-center items-center">
-            <img src={this.props.convoImage.fields.file.url} alt="" />
-
-            <h3 className="text-center  ml1  droid">
-              <a
-                href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <a
+              href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={this.props.convoImage.fields.file.url} alt="" />
+            </a>
+            <a
+              href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3 className="text-center  ml1  droid">
                 CONVERSATIONS<br></br>OUT EVERYWHERE!
-              </a>
-            </h3>
+              </h3>
+            </a>
           </div>
 
           <SecondaryLogo

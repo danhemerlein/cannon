@@ -21,6 +21,29 @@
   }
 }
 
+@mixin anchor-white {
+  a {
+    text-decoration: none;
+    color: map-get($colors, "white");
+    height: 100%;
+
+    &:visited {
+      text-decoration: none;
+      color: map-get($colors, "white");
+    }
+
+    &:active {
+      text-decoration: none;
+      color: map-get($colors, "white");
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: map-get($colors, "white");
+    }
+  }
+}
+
 /*------------------------------------*\
   #COMMON-BP
 \*------------------------------------*/

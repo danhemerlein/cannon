@@ -1,20 +1,18 @@
 @import "../../styles/app.scss";
 
 .SecondaryLogo {
-
   bottom: 2rem;
+  right: 1rem;
+
+  @include common-bp(tablet) {
+    right: 2rem;
+  }
 
   &__img {
     width: 11rem;
 
-    // -webkit-animation: rotating 12s linear infinite;
-    // -moz-animation: rotating 12s linear infinite;
-    // -ms-animation: rotating 12s linear infinite;
-    // -o-animation: rotating 12s linear infinite;
-    // animation: rotating 12s linear infinite;
-  }
-
-  &__paragraph {
-    letter-spacing: -1px;
+    @include common-bp(tablet) {
+      width: 8rem;
+    }
   }
 }

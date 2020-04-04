@@ -4,9 +4,6 @@
 
   overflow-x: hidden;
 
-  ul {
-  }
-
   &__main-logo-container {
     align-items: center;
 
@@ -29,7 +26,6 @@
     @media (min-width: 620px) {
       font-size: 2rem;
     }
-
   }
 
   &__sold-out-message-two {
@@ -43,7 +39,6 @@
     @media (min-width: 620px) {
       font-size: 2rem;
     }
-
   }
 
   &__merch, &__merch-photo-container {
@@ -55,7 +50,7 @@
   }
 
   &__merch-headline {
-    @include anchor;
+    @include anchor-white;
     font-size: 1.7rem;
 
     @media (min-width: 620px) {
@@ -63,15 +58,6 @@
     }
 
     text-align: center;
-
-    // a {
-    //   text-decoration: line-through !important;
-    // }
-
-    // p {
-    //   color: firebrick;
-    //   text-decoration: none !important;
-    // }
   }
 
   &__logo-container {
@@ -85,7 +71,7 @@
   }
 
   &__site-link {
-    @include anchor;
+    @include anchor-white;
     top: 2rem;
     right: 2rem;
     font-size: 1.5rem;

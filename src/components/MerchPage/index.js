@@ -37,19 +37,19 @@ export default class MerchPage extends Component {
 
     window.addEventListener("scroll", this.closeNav);
 
-    const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
+    // const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
 
-    AveraSans.load().then(function (loadedHand) {
-      document.fonts.add(loadedHand);
-      document.body.style.fontFamily = '"AveraSans", sans-serif';
-    }).catch(function (error) {
-      console.error('an error occured while loading the font');
-    });
+    // AveraSans.load().then(function (loadedHand) {
+    //   document.fonts.add(loadedHand);
+    //   document.body.style.fontFamily = '"AveraSans", sans-serif';
+    // }).catch(function (error) {
+    //   console.error('an error occured while loading the font');
+    // });
   };
 
   render() {
     return (
-      <div className="MerchPage w100">
+      <div className="MerchPage w100 droid">
         <div
           className={cx(
             "bg-color-black h100 bg-cover flex flex-col relative justify-center items-center"
@@ -79,7 +79,7 @@ export default class MerchPage extends Component {
 
               <h4
                 className={cx(
-                  "MerchPage__merch-headline headline-serif color-white underline col-12 md:col-8 pb2"
+                  "MerchPage__merch-headline headline-serif color-white underline col-12 md:col-8 pt1 pb2"
                 )}
               >
                 <a href="mailto:luke@overeasyusa.com">email to order</a>
@@ -185,18 +185,6 @@ export default class MerchPage extends Component {
 
           <div
             className={cx(
-              "HomePage__social-container HomePage__social-container--desktop self-end absolute"
-            )}
-          >
-            <SocialsModule
-              soundLinkCTA={this.props.soundLinkCTA}
-              instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twitterLinkCTA}
-            />
-          </div>
-
-          <div
-            className={cx(
               "HomePage__social-container HomePage__social-container--mobile self-end absolute",
               {
                 "HomePage__social-container--mobile--show":
@@ -215,9 +203,9 @@ export default class MerchPage extends Component {
             />
           </div>
 
-          <SecondaryLogo
+          {/* <SecondaryLogo
             src={this.props.secondaryLogo.fields.file.url}
-          ></SecondaryLogo>
+          ></SecondaryLogo> */}
 
           {/* <div className="MerchPage__sold-out-message headline-serif color-white absolute px2 py1">
             sold out

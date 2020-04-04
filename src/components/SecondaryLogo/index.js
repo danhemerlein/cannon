@@ -9,17 +9,17 @@ export default class SecondaryLogo extends Component {
     return (
       <div
         className={cx(
-          "SecondaryLogo flex items-end absolute w100 items-end flex-col"
+          "SecondaryLogo flex absolute flex-col items-end"
         )}
       >
         <img
-          className={cx("SecondaryLogo__img mr1 md:mr2")}
+          className={cx("SecondaryLogo__img mb_5")}
           src={this.props.src}
           alt=""
         />
         <p
           className={cx(
-            "SecondaryLogo__paragraph color-black droid mr1 md:mr2"
+            "color-black droid"
           )}
         >
           OVER EASY MUSIC, LLC
