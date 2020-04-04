@@ -14,7 +14,6 @@ const MainView = ({ model }) => {
   console.log(model)
   return (
     <div className="App">
-      <div class="App__nav-overlay"></div>
       <Router>
         <Switch>
           <Route
@@ -57,7 +56,17 @@ const MainView = ({ model }) => {
             )}
           />
 
-          <Route exact path="/music" render={() => <MusicPage />} />
+          <Route
+            exact
+            path="/music"
+            render={() => (
+              <MusicPage
+                backgroundImage={get(model, "fields.backgroundImage", {})}
+                logo={get(model, "fields.logo", {})}
+                secondaryLogo={get(model, "fields.secondaryLogo", {})}
+              />
+            )}
+          />
 
           <Route component={NotFound} />
         </Switch>

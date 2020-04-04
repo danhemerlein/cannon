@@ -2,8 +2,5 @@
 
 .NotFound {
   height: 100vw;
-  
-  a {
-    text-decoration: underline;
-  }
+  @include anchor-white;
 }

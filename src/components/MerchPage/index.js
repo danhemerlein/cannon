@@ -5,7 +5,6 @@ import cx from 'classnames';
 import SocialsModule from 'components/SocialsModule';
 import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
-import SecondaryLogo from 'components/SecondaryLogo';
 import NavOverlay from "components/NavOverlay";
 
 import './MerchPage.scss'
@@ -218,8 +217,6 @@ export default class MerchPage extends Component {
           >
             <SocialsModule
               soundLinkCTA={this.props.soundLinkCTA}
-              instagramLinkCTA={this.props.instagramLinkCTA}
-              twitterLinkCTA={this.props.twitterLinkCTA}
             />
           </div>
 
