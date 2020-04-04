@@ -6,6 +6,7 @@ import SocialsModule from 'components/SocialsModule';
 import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
 import SecondaryLogo from 'components/SecondaryLogo';
+import NavOverlay from "components/NavOverlay";
 
 import './MerchPage.scss'
 
@@ -50,6 +51,10 @@ export default class MerchPage extends Component {
   render() {
     return (
       <div className="MerchPage w100 droid">
+        <NavOverlay
+          navOpen={this.state.navOpen}
+          clickHandler={this.toggleNav}
+        />
         <div
           className={cx(
             "bg-color-black h100 bg-cover flex flex-col relative justify-center items-center"

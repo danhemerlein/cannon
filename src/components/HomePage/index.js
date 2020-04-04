@@ -8,6 +8,7 @@ import SocialsModule from 'components/SocialsModule';
 import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
 import SecondaryLogo from 'components/SecondaryLogo';
+import NavOverlay from 'components/NavOverlay';
 
 export default class HomePage extends Component {
 
@@ -63,6 +64,10 @@ export default class HomePage extends Component {
 
     return (
       <div className={cx("HomePage w100")}>
+        <NavOverlay
+          navOpen={this.state.navOpen}
+          clickHandler={this.toggleNav}
+        />
         <div
           style={backgroundImage}
           className={cx("HomePage__image1 h100 flex flex-col relative")}

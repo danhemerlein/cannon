@@ -5,14 +5,16 @@ import get from "utils/get";
 import './MainView.scss'
 import HomePage from 'components/HomePage';
 import MerchPage from 'components/MerchPage';
+import MusicPage from 'components/MusicPage';
 import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
 
-    console.log(model)
+  console.log(model)
   return (
     <div className="App">
+      <div class="App__nav-overlay"></div>
       <Router>
         <Switch>
           <Route
@@ -54,6 +56,8 @@ const MainView = ({ model }) => {
               />
             )}
           />
+
+          <Route exact path="/music" render={() => <MusicPage />} />
 
           <Route component={NotFound} />
         </Switch>
