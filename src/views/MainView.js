@@ -24,7 +24,6 @@ const MainView = ({ model }) => {
     }
   }
 
-  console.log(model)
   return (
     <div className="App">
       <Router>

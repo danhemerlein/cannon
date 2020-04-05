@@ -33,7 +33,6 @@ export default class MusicPage extends Component {
   }
 
   render() {
-    console.log(this.props.projects);
     const backgroundImage = {
       backgroundImage:
         "url(" + this.props.backgroundImage.fields.file.url + ")",
@@ -59,7 +58,6 @@ export default class MusicPage extends Component {
 
           <div className="flex flex-wrap w100 p1 md:p2">
             {this.props.projects.map((project, key) => {
-              console.log(project.fields.links.links);
 
               let even = true;
 
@@ -87,7 +85,6 @@ export default class MusicPage extends Component {
 
                     <ul className="MusicPage__unordered-list flex mt1 justify-center w100">
                       {project.fields.links.links.map((link, key) => {
-                        console.log(link.length);
 
                         if (key === 0 && link.length) {
                           return (
