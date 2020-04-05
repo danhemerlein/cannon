@@ -11,6 +11,19 @@ import NotFound from 'components/NotFound';
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
 
+  let site = [];
+  let musicPage = [];
+
+  for (let i = 0; i < model.length; i++) {
+    const element = model[i];
+
+    if ("artwork" in element.fields) {
+      musicPage.push(element)
+    } else {
+      site = element
+    }
+  }
+
   console.log(model)
   return (
     <div className="App">
@@ -21,18 +34,18 @@ const MainView = ({ model }) => {
             path="/"
             render={() => (
               <HomePage
-                mainTitle={get(model, "fields.mainTitle", {})}
-                footerTitle={get(model, "fields.footerTitle", {})}
-                footerSubTitle={get(model, "fields.footerSubTitle", {})}
-                soundLinkCTA={get(model, "fields.soundLinkCta", {})}
-                instagramLinkCTA={get(model, "fields.instagramLinkCta", {})}
-                twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
-                backgroundImage={get(model, "fields.backgroundImage", {})}
-                logo={get(model, "fields.logo", {})}
-                secondaryLogo={get(model, "fields.secondaryLogo", {})}
-                font={get(model, "fields.font")}
-                heroImage={get(model, "fields.heroImage", {})}
-                convoImage={get(model, "fields.conversationsLogo", {})}
+                mainTitle={get(site, "fields.mainTitle", {})}
+                footerTitle={get(site, "fields.footerTitle", {})}
+                footerSubTitle={get(site, "fields.footerSubTitle", {})}
+                soundLinkCTA={get(site, "fields.soundLinkCta", {})}
+                instagramLinkCTA={get(site, "fields.instagramLinkCta", {})}
+                twitterLinkCTA={get(site, "fields.twitterLinkCta", {})}
+                backgroundImage={get(site, "fields.backgroundImage", {})}
+                logo={get(site, "fields.logo", {})}
+                secondaryLogo={get(site, "fields.secondaryLogo", {})}
+                font={get(site, "fields.font")}
+                heroImage={get(site, "fields.heroImage", {})}
+                convoImage={get(site, "fields.conversationsLogo", {})}
               />
             )}
           />
@@ -42,16 +55,16 @@ const MainView = ({ model }) => {
             path="/merch"
             render={() => (
               <MerchPage
-                backgroundImage={get(model, "fields.backgroundImage", {})}
-                logo={get(model, "fields.logo", {})}
-                secondaryLogo={get(model, "fields.secondaryLogo", {})}
-                footerTitle={get(model, "fields.footerTitle", {})}
-                footerSubTitle={get(model, "fields.footerSubTitle", {})}
-                instagramLinkCTA={get(model, "fields.instagramLinkCta", {})}
-                twitterLinkCTA={get(model, "fields.twitterLinkCta", {})}
-                font={get(model, "fields.font")}
-                merchPrimary={get(model, "fields.merchPrimary")}
-                merchSecondary={get(model, "fields.merchSecondary")}
+                backgroundImage={get(site, "fields.backgroundImage", {})}
+                logo={get(site, "fields.logo", {})}
+                secondaryLogo={get(site, "fields.secondaryLogo", {})}
+                footerTitle={get(site, "fields.footerTitle", {})}
+                footerSubTitle={get(site, "fields.footerSubTitle", {})}
+                instagramLinkCTA={get(site, "fields.instagramLinkCta", {})}
+                twitterLinkCTA={get(site, "fields.twitterLinkCta", {})}
+                font={get(site, "fields.font")}
+                merchPrimary={get(site, "fields.merchPrimary")}
+                merchSecondary={get(site, "fields.merchSecondary")}
               />
             )}
           />
@@ -61,9 +74,10 @@ const MainView = ({ model }) => {
             path="/music"
             render={() => (
               <MusicPage
-                backgroundImage={get(model, "fields.backgroundImage", {})}
-                logo={get(model, "fields.logo", {})}
-                secondaryLogo={get(model, "fields.secondaryLogo", {})}
+                backgroundImage={get(site, "fields.backgroundImage", {})}
+                logo={get(site, "fields.logo", {})}
+                secondaryLogo={get(site, "fields.secondaryLogo", {})}
+                projects={musicPage}
               />
             )}
           />

@@ -22,6 +22,10 @@
   &__list-item {
     @include anchor;
 
+    @include common-bp(tablet) {
+      font-size: 2rem;
+    }
+
     button {
       border: none;
       background: transparent;

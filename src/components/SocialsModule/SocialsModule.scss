@@ -24,7 +24,7 @@
         fill: map-get($colors, "black");
       }
 
-      @media (min-width: 830px) {
+      @include common-bp(tablet) {
         width: 100% !important;
       }
     }

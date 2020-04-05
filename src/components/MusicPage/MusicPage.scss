@@ -2,4 +2,39 @@
 
 .MusicPage {
 
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__list-item {
+
+    svg {
+      width: 30px !important;
+      fill: map-get($colors, "black");
+
+      path {
+        fill: map-get($colors, "black");
+      }
+    }
+  }
+
+  &__pr1 {
+    @include common-bp(tablet) {
+      padding-right: 1rem;
+    }
+  }
+  &__pl1 {
+    @include common-bp(tablet) {
+      padding-left: 1rem;
+    }
+  }
+
+  svg.MusicPage__tidal {
+    width: 50px !important;
+  }
+
+  .svg-inline--fa {
+    height: auto !important;
+  }
+
 }

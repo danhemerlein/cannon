@@ -15,7 +15,7 @@ export default class SocialsModule extends Component {
         >
           <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
-              href="https://music.apple.com/us/album/these-walls-single/1472250194?app=itunes&ign-mpt=uo%3D4"
+              href="https://music.apple.com/us/album/conversations/1504146513?i=1504146698"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -25,7 +25,7 @@ export default class SocialsModule extends Component {
 
           <li className={cx("SocialsModule__list-item mb2 md:mb_5")}>
             <a
-              href="https://open.spotify.com/track/4P5d7lMNGqMPcVBn994Lbp?si=pMUT-nPHSX-DRDsYz54cuw"
+              href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
               target="_blank"
               rel="noopener noreferrer"
             >
