@@ -4,6 +4,10 @@
 
   overflow-x: hidden;
 
+  @include common-bp(tablet) {
+    height: 100vh;
+  }
+
   &__main-logo-container {
     align-items: center;
 
