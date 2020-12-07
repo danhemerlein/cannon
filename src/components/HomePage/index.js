@@ -95,8 +95,14 @@ export default class HomePage extends Component {
             </ul>
 
             <div className="col-12 relative">
-              <div className="content col-12 md:col-11">
-                <div style={heroImage} className="two-one"></div>
+              <div className="content col-12 md:col-3">
+               <a
+                href="https://open.spotify.com/album/0p6BK5gxpxydQPG5HsyOIl?si=U1v8uhtgSPiNvg4JLEZPHQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                  <div style={heroImage} className="one-one"></div>
+                </a>
               </div>
 
               <div
@@ -127,19 +133,12 @@ export default class HomePage extends Component {
 
           <div className="HomePage__cta-container  absolute  flex  justify-center items-center">
             <a
-              href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={this.props.convoImage.fields.file.url} alt="" />
-            </a>
-            <a
-              href="http://open.spotify.com/album/5TpsyMR0a4roN9z5g4veZ7"
+              href="https://open.spotify.com/album/0p6BK5gxpxydQPG5HsyOIl?si=U1v8uhtgSPiNvg4JLEZPHQ"
               target="_blank"
               rel="noopener noreferrer"
             >
               <h3 className="text-center  ml1  droid">
-                CONVERSATIONS<br></br>OUT EVERYWHERE!
+                bleu tapes<br></br>out now
               </h3>
             </a>
           </div>
