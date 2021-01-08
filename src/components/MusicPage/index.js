@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import cx from "classnames";
 
 import MainLogo from "components/MainLogo";
-import SocialsModule from "components/SocialsModule";
+// import SocialsModule from "components/SocialsModule";
 import SocialToggle from "components/SocialsToggle";
 import NavOverlay from "components/NavOverlay";
 
@@ -157,7 +157,7 @@ export default class MusicPage extends Component {
             })}
           </div>
 
-          <div
+          {/* <div
             className={cx(
               "HomePage__social-toggle absolute",
               {
@@ -174,9 +174,9 @@ export default class MusicPage extends Component {
               clickHandler={this.toggleNav}
               navOpen={this.state.navOpen}
             ></SocialToggle>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className={cx(
               "HomePage__social-container HomePage__social-container--mobile self-end absolute",
               {
@@ -190,7 +190,7 @@ export default class MusicPage extends Component {
             )}
           >
             <SocialsModule />
-          </div>
+          </div> */}
         </div>
       </div>
     );
