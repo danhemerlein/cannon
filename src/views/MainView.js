@@ -11,6 +11,7 @@ import OneOfThree from 'components/OneOfThree';
 import MerchPage from 'components/MerchPage';
 import MusicPage from 'components/MusicPage';
 // import NewMusicPage from 'components/NewMusicPage';
+import NewNewMusicPage from 'components/NewNewMusicPage';
 import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
@@ -110,12 +111,13 @@ const MainView = ({ model }) => {
             path="/music"
             render={() => (
               // <NewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
-              <MusicPage
-                backgroundImage={get(site, "fields.backgroundImage", {})}
-                logo={get(site, "fields.logo", {})}
-                secondaryLogo={get(site, "fields.secondaryLogo", {})}
-                projects={musicPage}
-              />
+              <NewNewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
+              // <MusicPage
+              //   backgroundImage={get(site, "fields.backgroundImage", {})}
+              //   logo={get(site, "fields.logo", {})}
+              //   secondaryLogo={get(site, "fields.secondaryLogo", {})}
+              //   projects={musicPage}
+              // />
             )}
           />
 
