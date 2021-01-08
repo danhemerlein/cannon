@@ -5,8 +5,8 @@ import './HomePage.scss'
 import cx from 'classnames';
 
 import SocialsModule from 'components/SocialsModule';
-import SocialToggle from 'components/SocialsToggle';
-import MainLogo from 'components/MainLogo';
+// import SocialToggle from 'components/SocialsToggle';
+// import MainLogo from 'components/MainLogo';
 import SecondaryLogo from 'components/SecondaryLogo';
 import NavOverlay from 'components/NavOverlay';
 

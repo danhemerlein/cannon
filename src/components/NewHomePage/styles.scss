@@ -1,0 +1,33 @@
+@import "../../styles/app.scss";
+
+.NewHomePage {
+  &__video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+  }
+
+  &__nav {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    left: 2rem;
+    top: 2rem;
+
+    @include anchor;
+  }
+
+  &__socials-container {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    right: 2rem;
+    top: 2rem;
+  }
+}

@@ -4,6 +4,7 @@ import get from "utils/get";
 
 import './MainView.scss'
 import HomePage from 'components/HomePage';
+import NewHomePage from 'components/NewHomePage';
 import MerchPage from 'components/MerchPage';
 import MusicPage from 'components/MusicPage';
 import NotFound from 'components/NotFound';
@@ -31,6 +32,14 @@ const MainView = ({ model }) => {
           <Route
             exact
             path="/"
+            render={() => (
+              <NewHomePage />
+            )}
+          />
+
+          <Route
+            exact
+            path="/old"
             render={() => (
               <HomePage
                 mainTitle={get(site, "fields.mainTitle", {})}
