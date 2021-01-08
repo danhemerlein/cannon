@@ -3,11 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import get from "utils/get";
 
 import './MainView.scss'
-import HomePage from 'components/HomePage';
+// import HomePage from 'components/HomePage';
 import NewHomePage from 'components/NewHomePage';
 import Videos from 'components/Videos';
+import BleuTapes from 'components/BleuTapes';
+import OneOfThree from 'components/OneOfThree';
 import MerchPage from 'components/MerchPage';
 import MusicPage from 'components/MusicPage';
+// import NewMusicPage from 'components/NewMusicPage';
 import NotFound from 'components/NotFound';
 
 const MainView = ({ model }) => {
@@ -48,6 +51,22 @@ const MainView = ({ model }) => {
 
           <Route
             exact
+            path="/bleu-tapes"
+            render={() => (
+              <BleuTapes />
+            )}
+          />
+
+          <Route
+            exact
+            path="/one-of-three"
+            render={() => (
+              <OneOfThree />
+            )}
+          />
+
+          {/* <Route
+            exact
             path="/old"
             render={() => (
               <HomePage
@@ -65,7 +84,7 @@ const MainView = ({ model }) => {
                 convoImage={get(site, "fields.conversationsLogo", {})}
               />
             )}
-          />
+          /> */}
 
           <Route
             exact
@@ -90,6 +109,7 @@ const MainView = ({ model }) => {
             exact
             path="/music"
             render={() => (
+              // <NewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
               <MusicPage
                 backgroundImage={get(site, "fields.backgroundImage", {})}
                 logo={get(site, "fields.logo", {})}
