@@ -13,21 +13,33 @@
     display: block;
   }
 
-  &__nav {
-    position: fixed;
-    display: block;
-    z-index: 10;
-    left: 2rem;
-    top: 2rem;
+  &__unordered-list {
+    color: map-get($colors, "white");
+    @include anchor-white;
+  }
 
-    @include anchor;
+  &__list-item {
+    margin: 4px 0;
   }
 
   &__socials-container {
     position: fixed;
     display: block;
     z-index: 10;
-    right: 2rem;
-    top: 2rem;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  &__icons {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50% -50%);
+
+    a {
+      text-decoration: none;
+    }
   }
 }

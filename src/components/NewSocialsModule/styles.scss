@@ -1,11 +1,13 @@
 @import "../../styles/app.scss";
 
 .NewSocialsModule {
+  @include anchor;
+
   svg {
-    fill: map-get($colors, "black");
+    fill: map-get($colors, "white");
 
     path {
-      fill: map-get($colors, "black");
+      fill: map-get($colors, "white");
     }
   }
 }

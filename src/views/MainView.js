@@ -5,6 +5,7 @@ import get from "utils/get";
 import './MainView.scss'
 import HomePage from 'components/HomePage';
 import NewHomePage from 'components/NewHomePage';
+import Videos from 'components/Videos';
 import MerchPage from 'components/MerchPage';
 import MusicPage from 'components/MusicPage';
 import NotFound from 'components/NotFound';
@@ -34,6 +35,14 @@ const MainView = ({ model }) => {
             path="/"
             render={() => (
               <NewHomePage />
+            )}
+          />
+
+          <Route
+            exact
+            path="/videos"
+            render={() => (
+              <Videos backgroundImage={get(site, "fields.backgroundImage", {})} />
             )}
           />
 
