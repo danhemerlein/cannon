@@ -15,22 +15,25 @@ export default class NewHomePage extends Component {
         <video autoPlay loop muted webkit-playsinline="true" playsInline src="./assets/loop_clip_web.mp4" className="NewHomePage__video none md:block"></video>
 
         <div className="NewHomePage__icons">
-          <Link to="/music">
-            <span role="img" aria-label="rewind">
+          <Link to="/music" className="flex items-center justify-center">
+            <img src="./assets/rewind-icon.png" alt="rewind icon" className="col-4" />
+            {/* <span role="img" aria-label="rewind">
               ⏪
-            </span>
+            </span> */}
           </Link>
 
-          <Link to="/bleu-tapes">
-            <span role="img" aria-label="play">
-              ⏯
-            </span>
+          <Link to="/bleu-tapes" className="flex items-center justify-center">
+            <img src="./assets/play-icon.png" alt="play icon" className="col-4" />
+            {/* <span role="img" aria-label="play"> */}
+              {/* ⏯ */}
+            {/* </span> */}
           </Link>
 
-          <Link to="/one-of-three">
-            <span role="img" aria-label="fast forward">
-              ⏩
-            </span>
+          <Link to="/one-of-three" className="flex items-center justify-center">
+            <img src="./assets/ff-icon.png" alt="fast forward icon" className="col-4" />
+            {/* <span role="img" aria-label="fast forward"> */}
+              {/* ⏩ */}
+            {/* </span> */}
           </Link>
 
         </div>
@@ -38,13 +41,13 @@ export default class NewHomePage extends Component {
         <div className="NewHomePage__socials-container">
           <NewSocialsModule />
           <ul className="NewHomePage__unordered-list flex flex-col items-end">
-            <li className="NewHomePage__list-item droid">
+            <li className="NewHomePage__list-item ocr">
               <Link to="/merch">merch</Link>
             </li>
-            <li className="NewHomePage__list-item droid">
+            <li className="NewHomePage__list-item ocr">
               <a href="mailto:cannonsmgmt@gmail.com">contact</a>
             </li>
-            <li className="NewHomePage__list-item droid">
+            <li className="NewHomePage__list-item ocr">
               <Link to="/videos">videos</Link>
             </li>
 

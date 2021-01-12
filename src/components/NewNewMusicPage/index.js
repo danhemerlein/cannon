@@ -16,7 +16,7 @@ export default class NewNewMusicPage extends Component {
     };
 
     return (
-      <div className="NewNewMusicPage w100 droid p1" style={backgroundImage}>
+      <div className="NewNewMusicPage w100 ocr p1" style={backgroundImage}>
         <div
           className="h100 bg-cover flex flex-col relative justify-center items-center">
 
