@@ -202,7 +202,7 @@ export default class MerchPage extends Component {
             ></SocialToggle>
           </div>
 
-          <div
+          {/* <div
             className={cx(
               "HomePage__social-container HomePage__social-container--mobile self-end absolute",
               {
@@ -218,15 +218,8 @@ export default class MerchPage extends Component {
             <SocialsModule
               soundLinkCTA={this.props.soundLinkCTA}
             />
-          </div>
-
-          {/* <SecondaryLogo
-            src={this.props.secondaryLogo.fields.file.url}
-          ></SecondaryLogo> */}
-
-          {/* <div className="MerchPage__sold-out-message headline-serif color-white absolute px2 py1">
-            sold out
           </div> */}
+
         </div>
       </div>
     );

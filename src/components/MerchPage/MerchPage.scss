@@ -1,11 +1,10 @@
 @import "../../styles/app.scss";
 
 .MerchPage {
-
   overflow-x: hidden;
 
   @include common-bp(tablet) {
-    height: 100vh;
+    // height: 100vh;
   }
 
   &__main-logo-container {
@@ -45,7 +44,8 @@
     }
   }
 
-  &__merch, &__merch-photo-container {
+  &__merch,
+  &__merch-photo-container {
     max-width: 1024px;
   }
 
@@ -96,4 +96,3 @@
     bottom: 2rem;
   }
 }
-
