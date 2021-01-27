@@ -65,7 +65,7 @@ export default class Videos extends Component {
         ></iframe>
 
         <iframe
-          className="Videos__iframe Videos__iframe--last col-12 pb1 md:col-6 md:py_5"
+          className="Videos__iframe Videos__iframe--last col-12 md:col-6 pb1 md:pr_5 md:py_5"
           title='MEAL PREP / episode three: "dinner"'
           src="https://www.youtube.com/embed/lfwJn9srShg"
           frameBorder="0"
@@ -78,7 +78,7 @@ export default class Videos extends Component {
         ></iframe>
 
         <iframe
-          className="Videos__iframe Videos__iframe--last col-12 md:col-6 md:pt_5"
+          className="Videos__iframe Videos__iframe--last col-12 md:col-6 md:pt_5 md:py_5 md:pl_5"
           title='parrot_v3 | visualizer'
           src="https://www.youtube.com/embed/5KytlTb0xwk"
           frameBorder="0"
