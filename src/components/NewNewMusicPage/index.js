@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import cx from "classnames";
-
-
 import "./styles.scss";
 
 export default class NewNewMusicPage extends Component {
@@ -18,10 +15,10 @@ export default class NewNewMusicPage extends Component {
     return (
       <div className="NewNewMusicPage w100 ocr p1" style={backgroundImage}>
         <div
-          className="h100 bg-cover flex flex-col relative justify-center items-center">
+          className="NewNewMusicPage__inner h100 bg-cover flex flex-col relative">
 
           <div className="flex flex-wrap w100 ">
-            <div className="NewNewMusicPage__project col-12 md:col-6 mb1">
+            <div className="NewNewMusicPage__project col-6 mb1">
               <div
                 className="w100 flex flex-col items-center justify-center md:pr_5"
               >
@@ -35,7 +32,7 @@ export default class NewNewMusicPage extends Component {
               </div>
             </div>
 
-            <div className="NewNewMusicPage__project col-12 md:col-6 mb1 md:pl_5">
+            <div className="NewNewMusicPage__project col-6 mb1 md:pl_5">
               <div
                 className="w100 flex flex-col items-center justify-center">
                 <a href="https://ffm.to/cannonconversations" target="_blank" rel="noopener noreferrer">
@@ -48,7 +45,7 @@ export default class NewNewMusicPage extends Component {
               </div>
             </div>
 
-            <div className="NewNewMusicPage__project col-12 md:col-6 mb1 md:pr_5">
+            <div className="NewNewMusicPage__project col-6 mb1 md:pr_5">
               <div
                 className="w100 flex flex-col items-center justify-center">
                 <a href="https://distrokid.com/hyperfollow/cannon2/these-walls" target="_blank" rel="noopener noreferrer">
@@ -61,7 +58,7 @@ export default class NewNewMusicPage extends Component {
               </div>
             </div>
 
-            <div className="NewNewMusicPage__project col-12 md:col-6 mb1 md:pl_5">
+            <div className="NewNewMusicPage__project col-6 mb1 md:pl_5">
               <div
                 className="w100 flex flex-col items-center justify-center">
                 <a href="https://distrokid.com/hyperfollow/cannon12/water-glass" target="_blank" rel="noopener noreferrer">
@@ -74,7 +71,7 @@ export default class NewNewMusicPage extends Component {
               </div>
             </div>
 
-            <div className="NewNewMusicPage__project col-12 md:col-6 mauto">
+            <div className="NewNewMusicPage__project col-6 mauto">
               <div
                 className="w100 flex flex-col items-center justify-center">
                 <a href="https://distrokid.com/hyperfollow/cannon2/stan-smiths" target="_blank" rel="noopener noreferrer">

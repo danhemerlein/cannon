@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import cx from 'classnames';
 
-import SocialsModule from 'components/SocialsModule';
 import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
 import NavOverlay from "components/NavOverlay";
@@ -34,30 +33,15 @@ export default class MerchPage extends Component {
   }
 
   componentDidMount() {
-
     window.addEventListener("scroll", this.closeNav);
-
-    // const AveraSans = new FontFace('AveraSans', `url(${this.props.font.fields.file.url})`);
-
-    // AveraSans.load().then(function (loadedHand) {
-    //   document.fonts.add(loadedHand);
-    //   document.body.style.fontFamily = '"AveraSans", sans-serif';
-    // }).catch(function (error) {
-    //   console.error('an error occured while loading the font');
-    // });
   };
 
   render() {
     return (
-      <div className="MerchPage w100 droid">
-        <NavOverlay
-          navOpen={this.state.navOpen}
-          clickHandler={this.toggleNav}
-        />
-        <div
-          className={cx(
-            "bg-color-black h100 bg-cover flex flex-col relative justify-center items-center"
-          )}
+      <div className="MerchPage w100 droid relative">
+
+        <div className="MerchPage__inner bg-color-black h100 bg-cover flex flex-col relative justify-center items-center"
+
         >
           <div className="MerchPage__main-logo-container flex w100 p1 md:p2">
             <MainLogo src={this.props.logo.fields.file.url}></MainLogo>

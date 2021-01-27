@@ -1,4 +1,9 @@
 @import "../../styles/app.scss";
 
 .NewNewMusicPage {
+  min-height: 100vh;
+
+  &__inner {
+    min-height: 100vh;
+  }
 }

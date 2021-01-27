@@ -2,10 +2,7 @@
 
 .MerchPage {
   overflow-x: hidden;
-
-  @include common-bp(tablet) {
-    // height: 100vh;
-  }
+  min-height: 100vh;
 
   &__main-logo-container {
     align-items: center;
@@ -17,6 +14,10 @@
     @media (min-width: 620px) {
       align-items: initial;
     }
+  }
+
+  &__inner {
+    min-height: 100vh;
   }
 
   &__sold-out-message {
