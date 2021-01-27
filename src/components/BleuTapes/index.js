@@ -1,18 +1,12 @@
-import React, { Component } from "react";
-import { useMediaQuery } from "react-responsive";
-import breakpoints from "utils/breakpoints";
-
+import React from "react";
+import GoHome from "components/GoHome";
 
 import './styles.scss'
 
 const BleuTapes = (props) => {
 
-  const isTabletUp = useMediaQuery({
-    query: breakpoints.tablet,
-  });
-
   const backgroundImage = {
-    backgroundImage: isTabletUp ? "url('/assets/bleu-tapes.png')" : "url('/assets/play-page-mobile.jpg')",
+    backgroundImage: "url('/assets/bleu-tapes.png')",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -30,7 +24,10 @@ const BleuTapes = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="BleuTapes BleuTapes__bg p1" style={backgroundImage}>
+      <div className="BleuTapes BleuTapes__bg p1 relative" style={backgroundImage}>
+
+        <GoHome />
+
         <div className="BleuTapes__inner h100 none lg:block" style={backgroundImageInner}></div>
       </div>
     </a>

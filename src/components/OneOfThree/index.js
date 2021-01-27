@@ -1,18 +1,30 @@
 import React, { Component } from "react";
+import { useMediaQuery } from "react-responsive";
+import breakpoints from "utils/breakpoints";
+import GoHome from "components/GoHome";
+
 import './styles.scss'
 
-export default class OneOfThree extends Component {
+const OneOfThree = (props) => {
 
-  render() {
-    const backgroundImage = {
-      backgroundImage: "url('/assets/one-of-three.jpg')",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-    };
+  const isTabletUp = useMediaQuery({
+    query: breakpoints.tablet,
+  });
 
-    return (
-      <div className="OneOfThree p1" style={backgroundImage}></div>
-    );
-  }
+  const backgroundImage = {
+    backgroundImage:isTabletUp ? "url('/assets/one-of-three.jpg')" : "url('/assets/fast-forward-mobile.jpg')",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  };
+
+  return (
+    <div className="OneOfThree p1 relative" style={backgroundImage}>
+
+      <GoHome />
+
+    </div>
+  );
 }
+
+export default OneOfThree
