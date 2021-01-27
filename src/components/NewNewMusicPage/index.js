@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import GoHome from "components/GoHome";
+
 import "./styles.scss";
 
 export default class NewNewMusicPage extends Component {
@@ -13,9 +15,12 @@ export default class NewNewMusicPage extends Component {
     };
 
     return (
-      <div className="NewNewMusicPage w100 ocr p1" style={backgroundImage}>
+      <div className="NewNewMusicPage w100 ocr p1 relative" style={backgroundImage}>
+
+        <GoHome />
+
         <div
-          className="NewNewMusicPage__inner h100 bg-cover flex flex-col relative">
+          className="NewNewMusicPage__inner h100 bg-cover flex flex-col relative mt2">
 
           <div className="flex flex-wrap w100 ">
             <div className="NewNewMusicPage__project col-6 mb1">

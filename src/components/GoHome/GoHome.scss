@@ -1,0 +1,19 @@
+@import "../../styles/app.scss";
+
+.GoHome {
+  top: 1rem;
+  left: 1rem;
+  @include anchor;
+  // text-decoration: underline;
+
+  a {
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__white {
+    color: white;
+    @include anchor-white;
+  }
+}

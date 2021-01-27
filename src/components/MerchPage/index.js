@@ -4,7 +4,8 @@ import cx from 'classnames';
 
 import SocialToggle from 'components/SocialsToggle';
 import MainLogo from 'components/MainLogo';
-import NavOverlay from "components/NavOverlay";
+
+import GoHome from "components/GoHome";
 
 import './MerchPage.scss'
 
@@ -38,11 +39,14 @@ export default class MerchPage extends Component {
 
   render() {
     return (
-      <div className="MerchPage w100 droid relative">
+      <div className="MerchPage w100 droid">
 
         <div className="MerchPage__inner bg-color-black h100 bg-cover flex flex-col relative justify-center items-center"
 
         >
+
+          <GoHome white={true} />
+
           <div className="MerchPage__main-logo-container flex w100 p1 md:p2">
             <MainLogo src={this.props.logo.fields.file.url}></MainLogo>
           </div>
@@ -71,8 +75,6 @@ export default class MerchPage extends Component {
                 )}
               >
                 <a href="mailto:luke@overeasyusa.com">email to order</a>
-                {/* <a href="#">email to order</a> */}
-                {/* <p>sold out</p> */}
               </h4>
 
               <div

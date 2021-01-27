@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import cx from "classnames";
 
 import MainLogo from "components/MainLogo";
-// import SocialsModule from "components/SocialsModule";
 import SocialToggle from "components/SocialsToggle";
 import NavOverlay from "components/NavOverlay";
 
@@ -43,10 +42,6 @@ export default class MusicPage extends Component {
 
     return (
       <div className="MusicPage w100 droid" style={backgroundImage}>
-        <NavOverlay
-          navOpen={this.state.navOpen}
-          clickHandler={this.toggleNav}
-        />
         <div
           className={cx(
             "h100 bg-cover flex flex-col relative justify-center items-center"
