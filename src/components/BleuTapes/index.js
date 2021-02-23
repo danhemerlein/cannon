@@ -31,13 +31,11 @@ const BleuTapes = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
+      <GoHome />
 
       <div className="BleuTapes block lg:none" style={mobileBackgroundImage}></div>
 
       <div className="BleuTapes p1 none lg:block" style={backgroundImage}>
-
-        <GoHome />
-
         <div className="h100 none lg:block" style={backgroundImageInner}></div>
       </div>
     </a>
