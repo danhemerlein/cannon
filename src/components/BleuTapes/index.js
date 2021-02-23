@@ -18,13 +18,23 @@ const BleuTapes = (props) => {
     backgroundSize: "cover",
   };
 
+  const mobileBackgroundImage = {
+    backgroundImage: "url('/assets/bleu-tapes-mobile.jpg')",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  };
+
   return (
     <a
       href="https://open.spotify.com/album/0p6BK5gxpxydQPG5HsyOIl?si=WUH1JklSRBmXB7x3AgZdKQ"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="BleuTapes BleuTapes__bg p1 relative" style={backgroundImage}>
+
+      <div className="BleuTapes  BleuTapes__mobile block lg:none" style={mobileBackgroundImage}></div>
+
+      <div className="BleuTapes BleuTapes__bg p1 relative none lg:block" style={backgroundImage}>
 
         <GoHome />
 

@@ -3,6 +3,10 @@
 .BleuTapes {
   height: 100vh;
 
+  &__mobile {
+    background-image: "url('./public/assets/bleu-tapes-mobile.jpg')";
+  }
+
   &__bg {
     background-image: "url('./public/assets/play-page-mobile.jpg')";
 
