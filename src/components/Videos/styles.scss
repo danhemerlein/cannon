@@ -1,6 +1,14 @@
 @import "../../styles/app.scss";
 
 .Videos {
+  &__inner {
+    max-width: 1024px;
+  }
+
+  &__h1 {
+    font-size: 2rem;
+  }
+
   &__iframe {
     height: 450px;
     border: 0;

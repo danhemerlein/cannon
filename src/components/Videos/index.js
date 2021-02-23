@@ -13,11 +13,27 @@ export default class Videos extends Component {
       backgroundSize: "cover",
     };
     return (
-      <div className="Videos p1 relative" style={backgroundImage}>
+      <div className="Videos p1 relative flex items-center justify-center ocr" style={backgroundImage}>
 
         <GoHome />
 
         <div className="Videos__inner flex flex-wrap mt2">
+
+        <h1 className="Videos__h1 text-center mb1 w100">Oxygen Music Video Out Now!</h1>
+
+        <iframe
+          className="Videos__iframe Videos__iframe--first col-12 pb1"
+          title="Cannon - Oxygen (Official Music Video)"
+          src="https://www.youtube.com/embed/EzLBtgcgJPk"
+          frameBorder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen">
+
+        </iframe>
 
           <iframe
             className="Videos__iframe col-12 md:col-6 pb1 md:pr_5 md:pb_5"

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useMediaQuery } from "react-responsive";
 import breakpoints from "utils/breakpoints";
 import GoHome from "components/GoHome";

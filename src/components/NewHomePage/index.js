@@ -17,23 +17,14 @@ export default class NewHomePage extends Component {
         <div className="NewHomePage__icons">
           <Link to="/music" className="flex items-center justify-center">
             <img src="./assets/rewind-icon.png" alt="rewind icon" className="col-4" />
-            {/* <span role="img" aria-label="rewind">
-              ⏪
-            </span> */}
           </Link>
 
           <Link to="/bleu-tapes" className="flex items-center justify-center">
             <img src="./assets/play-icon.png" alt="play icon" className="col-4" />
-            {/* <span role="img" aria-label="play"> */}
-              {/* ⏯ */}
-            {/* </span> */}
           </Link>
 
           <Link to="/one-of-three" className="flex items-center justify-center">
             <img src="./assets/ff-icon.png" alt="fast forward icon" className="col-4" />
-            {/* <span role="img" aria-label="fast forward"> */}
-              {/* ⏩ */}
-            {/* </span> */}
           </Link>
 
         </div>

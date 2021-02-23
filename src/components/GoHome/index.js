@@ -17,7 +17,7 @@ export default class GoHome extends Component {
 
   render() {
     return (
-      <div className={cx("GoHome absolute droid", {
+      <div className={cx("GoHome absolute ocr", {
           "GoHome__white ": this.props.white
         })}>
         <Link to="/">home</Link>
