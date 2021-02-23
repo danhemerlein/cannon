@@ -2,24 +2,4 @@
 
 .BleuTapes {
   height: 100vh;
-
-  &__mobile {
-    background-image: "url('./public/assets/bleu-tapes-mobile.jpg')";
-  }
-
-  &__bg {
-    background-image: "url('./public/assets/play-page-mobile.jpg')";
-
-    @include common-bp(tablet) {
-      background-image: "url('./public/assets/assets/bleu-tapes.png')";
-    }
-  }
-
-  &__inner {
-    background-image: none;
-
-    @include common-bp(tablet) {
-      background-image: "url('./public/assets/assets/bleu-tracks.png')";
-    }
-  }
 }

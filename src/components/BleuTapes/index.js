@@ -32,13 +32,13 @@ const BleuTapes = (props) => {
       rel="noopener noreferrer"
     >
 
-      <div className="BleuTapes  BleuTapes__mobile block lg:none" style={mobileBackgroundImage}></div>
+      <div className="BleuTapes block lg:none" style={mobileBackgroundImage}></div>
 
-      <div className="BleuTapes BleuTapes__bg p1 relative none lg:block" style={backgroundImage}>
+      <div className="BleuTapes p1 none lg:block" style={backgroundImage}>
 
         <GoHome />
 
-        <div className="BleuTapes__inner h100 none lg:block" style={backgroundImageInner}></div>
+        <div className="h100 none lg:block" style={backgroundImageInner}></div>
       </div>
     </a>
   );
