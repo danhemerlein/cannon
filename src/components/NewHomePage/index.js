@@ -27,7 +27,7 @@ export default class NewHomePage extends Component {
         ></video>
 
         <div className='NewHomePage__icons'>
-          <Link to='/music' className='flex items-center justify-center'>
+          {/* <Link to='/music' className='flex items-center justify-center'>
             <img
               src='./assets/rewind-icon.png'
               alt='rewind icon'
@@ -49,7 +49,24 @@ export default class NewHomePage extends Component {
               alt='fast forward icon'
               className='col-4'
             />
-          </Link>
+          </Link> */}
+
+          <div className='flex flex-col w100 items-center'>
+            <h1 className='NewHomePage__headline mb1'>
+              <a
+                href='https://onerpm.link/6639248105'
+                target='_blank'
+                rel='noreferrer'
+              >
+                pre save afterglows
+              </a>
+            </h1>
+            <img
+              src='./assets/afterglows-art.jpg'
+              alt='fast forward icon'
+              className='col-10 md:col-6 lg:col-4'
+            />
+          </div>
         </div>
 
         <div className='NewHomePage__socials-container'>
