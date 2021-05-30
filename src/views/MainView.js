@@ -1,29 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import get from "utils/get";
-
-import './MainView.scss'
 // import HomePage from 'components/HomePage';
-import NewHomePage from 'components/NewHomePage';
-import Videos from 'components/Videos';
-import BleuTapes from 'components/BleuTapes';
-import OneOfThree from 'components/OneOfThree';
-import MerchPage from 'components/MerchPage';
-import MusicPage from 'components/MusicPage';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import BleuTapes from '../components/BleuTapes'
+import MerchPage from '../components/MerchPage'
+import NewHomePage from '../components/NewHomePage'
 // import NewMusicPage from 'components/NewMusicPage';
-import NewNewMusicPage from 'components/NewNewMusicPage';
-import NotFound from 'components/NotFound';
+import NewNewMusicPage from '../components/NewNewMusicPage'
+import NotFound from '../components/NotFound'
+import OneOfThree from '../components/OneOfThree'
+import Videos from '../components/Videos'
+import { get } from '../utils'
+import './MainView.scss'
 
 const MainView = ({ model }) => {
-  if (!model || model.isError) return <h1>Oops, something went wrong!</h1>;
+  if (!model || model.isError) return <h1>Oops, something went wrong!</h1>
 
-  let site = [];
-  let musicPage = [];
+  let site = []
+  let musicPage = []
 
   for (let i = 0; i < model.length; i++) {
-    const element = model[i];
+    const element = model[i]
 
-    if ("artwork" in element.fields) {
+    if ('artwork' in element.fields) {
       musicPage.push(element)
     } else {
       site = element
@@ -31,40 +29,24 @@ const MainView = ({ model }) => {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <NewHomePage />
-            )}
-          />
+          <Route exact path='/' render={() => <NewHomePage />} />
 
           <Route
             exact
-            path="/videos"
+            path='/videos'
             render={() => (
-              <Videos backgroundImage={get(site, "fields.backgroundImage", {})} />
+              <Videos
+                backgroundImage={get(site, 'fields.backgroundImage', {})}
+              />
             )}
           />
 
-          <Route
-            exact
-            path="/bleu-tapes"
-            render={() => (
-              <BleuTapes />
-            )}
-          />
+          <Route exact path='/bleu-tapes' render={() => <BleuTapes />} />
 
-          <Route
-            exact
-            path="/one-of-three"
-            render={() => (
-              <OneOfThree />
-            )}
-          />
+          <Route exact path='/one-of-three' render={() => <OneOfThree />} />
 
           {/* <Route
             exact
@@ -89,29 +71,31 @@ const MainView = ({ model }) => {
 
           <Route
             exact
-            path="/merch"
+            path='/merch'
             render={() => (
               <MerchPage
-                backgroundImage={get(site, "fields.backgroundImage", {})}
-                logo={get(site, "fields.logo", {})}
-                secondaryLogo={get(site, "fields.secondaryLogo", {})}
-                footerTitle={get(site, "fields.footerTitle", {})}
-                footerSubTitle={get(site, "fields.footerSubTitle", {})}
-                instagramLinkCTA={get(site, "fields.instagramLinkCta", {})}
-                twitterLinkCTA={get(site, "fields.twitterLinkCta", {})}
-                font={get(site, "fields.font")}
-                merchPrimary={get(site, "fields.merchPrimary")}
-                merchSecondary={get(site, "fields.merchSecondary")}
+                backgroundImage={get(site, 'fields.backgroundImage', {})}
+                logo={get(site, 'fields.logo', {})}
+                secondaryLogo={get(site, 'fields.secondaryLogo', {})}
+                footerTitle={get(site, 'fields.footerTitle', {})}
+                footerSubTitle={get(site, 'fields.footerSubTitle', {})}
+                instagramLinkCTA={get(site, 'fields.instagramLinkCta', {})}
+                twitterLinkCTA={get(site, 'fields.twitterLinkCta', {})}
+                font={get(site, 'fields.font')}
+                merchPrimary={get(site, 'fields.merchPrimary')}
+                merchSecondary={get(site, 'fields.merchSecondary')}
               />
             )}
           />
 
           <Route
             exact
-            path="/music"
+            path='/music'
             render={() => (
               // <NewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
-              <NewNewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
+              <NewNewMusicPage
+                backgroundImage={get(site, 'fields.backgroundImage', {})}
+              />
               // <MusicPage
               //   backgroundImage={get(site, "fields.backgroundImage", {})}
               //   logo={get(site, "fields.logo", {})}
@@ -125,7 +109,7 @@ const MainView = ({ model }) => {
         </Switch>
       </Router>
     </div>
-  );
-};
+  )
+}
 
-export default MainView;
+export default MainView
