@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import GoHome from '../GoHome'
-import './styles.scss'
+import React, { Component } from "react"
+import GoHome from "../GoHome"
+import "./styles.scss"
 
 export default class Videos extends Component {
   render() {
     const backgroundImage = {
       backgroundImage:
-        'url(' + this.props.backgroundImage.fields.file.url + ')',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
+        "url(" + this.props.backgroundImage.fields.file.url + ")",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
     }
     return (
       <div
@@ -19,9 +19,31 @@ export default class Videos extends Component {
         <GoHome />
 
         <div className='Videos__inner flex flex-wrap mt2'>
-          <h1 className='Videos__h1 text-center mb1 w100'>
-            Oxygen Music Video Out Now!
-          </h1>
+          <iframe
+            className='Videos__iframe col-12 md:col-6 pb1 md:pr_5 md:pb_5'
+            title='Cannon - College Friends (Official Music Video)'
+            src='https://www.youtube.com/embed/L0BCTWws4D4'
+            frameBorder='0'
+            allow='accelerometer; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen='allowfullscreen'
+            mozallowfullscreen='mozallowfullscreen'
+            msallowfullscreen='msallowfullscreen'
+            oallowfullscreen='oallowfullscreen'
+            webkitallowfullscreen='webkitallowfullscreen'
+          ></iframe>
+
+          <iframe
+            className='Videos__iframe col-12 md:col-6 pb1 md:pr_5 md:pb_5'
+            title='Cannon - Afterglows (Official Music Video)'
+            src='https://www.youtube.com/embed/GDAgK4X0-P8'
+            frameBorder='0'
+            allow='accelerometer; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen='allowfullscreen'
+            mozallowfullscreen='mozallowfullscreen'
+            msallowfullscreen='msallowfullscreen'
+            oallowfullscreen='oallowfullscreen'
+            webkitallowfullscreen='webkitallowfullscreen'
+          ></iframe>
 
           <iframe
             className='Videos__iframe Videos__iframe--first col-12 pb1'

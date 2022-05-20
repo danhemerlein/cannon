@@ -1,15 +1,26 @@
 @import "../../styles/app.scss";
 
 .NewHomePage {
+  &__hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &__logo-container {
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+  }
 
   &__headline {
     font-size: 2.4rem;
     @include anchor-white;
 
     a {
-      text-decoration: underline !important
+      text-decoration: underline !important;
     }
-
   }
   &__video {
     position: fixed;
@@ -24,20 +35,23 @@
   }
 
   &__unordered-list {
-    color: map-get($colors, "white");
-    @include anchor-white;
+    color: map-get($colors, "black");
+    @include anchor-black;
   }
 
   &__list-item {
     margin: 4px 0;
+    a {
+      color: #000;
+    }
   }
 
   &__socials-container {
     position: fixed;
     display: block;
     z-index: 10;
-    right: 1rem;
-    top: 1rem;
+    left: 1rem;
+    bottom: 1rem;
   }
 
   &__icons {

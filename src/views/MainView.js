@@ -1,16 +1,16 @@
 // import HomePage from 'components/HomePage';
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import BleuTapes from '../components/BleuTapes'
-import MerchPage from '../components/MerchPage'
-import NewHomePage from '../components/NewHomePage'
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import BleuTapes from "../components/BleuTapes"
+import MerchPage from "../components/MerchPage"
+import NewHomePage from "../components/NewHomePage"
 // import NewMusicPage from 'components/NewMusicPage';
-import NewNewMusicPage from '../components/NewNewMusicPage'
-import NotFound from '../components/NotFound'
-import OneOfThree from '../components/OneOfThree'
-import Videos from '../components/Videos'
-import { get } from '../utils'
-import './MainView.scss'
+import NewNewMusicPage from "../components/NewNewMusicPage"
+import NotFound from "../components/NotFound"
+import OneOfThree from "../components/OneOfThree"
+import Videos from "../components/Videos"
+import { get } from "../utils"
+import "./MainView.scss"
 
 const MainView = ({ model }) => {
   if (!model || model.isError) return <h1>Oops, something went wrong!</h1>
@@ -21,7 +21,7 @@ const MainView = ({ model }) => {
   for (let i = 0; i < model.length; i++) {
     const element = model[i]
 
-    if ('artwork' in element.fields) {
+    if ("artwork" in element.fields) {
       musicPage.push(element)
     } else {
       site = element
@@ -39,7 +39,7 @@ const MainView = ({ model }) => {
             path='/videos'
             render={() => (
               <Videos
-                backgroundImage={get(site, 'fields.backgroundImage', {})}
+                backgroundImage={get(site, "fields.backgroundImage", {})}
               />
             )}
           />
@@ -68,7 +68,7 @@ const MainView = ({ model }) => {
               />
             )}
           /> */}
-
+          {/*
           <Route
             exact
             path='/merch'
@@ -86,7 +86,7 @@ const MainView = ({ model }) => {
                 merchSecondary={get(site, 'fields.merchSecondary')}
               />
             )}
-          />
+          /> */}
 
           <Route
             exact
@@ -94,7 +94,7 @@ const MainView = ({ model }) => {
             render={() => (
               // <NewMusicPage backgroundImage={get(site, "fields.backgroundImage", {})} />
               <NewNewMusicPage
-                backgroundImage={get(site, 'fields.backgroundImage', {})}
+                backgroundImage={get(site, "fields.backgroundImage", {})}
               />
               // <MusicPage
               //   backgroundImage={get(site, "fields.backgroundImage", {})}
