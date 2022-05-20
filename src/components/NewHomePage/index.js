@@ -25,6 +25,8 @@ export default class NewHomePage extends Component {
           playsInline
           src='./assets/loop_clip_web.mp4'
           className='NewHomePage__video none md:block'
+
+
         ></video> */}
 
         <div className='NewHomePage__logo-container'>
