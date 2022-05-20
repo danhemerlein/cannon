@@ -44,13 +44,35 @@
   }
 }
 
+@mixin anchor-black {
+  a {
+    text-decoration: none;
+    color: map-get($colors, "black");
+    height: 100%;
+
+    &:visited {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+
+    &:active {
+      text-decoration: none;
+      color: map-get($colors, "black");
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: map-get($colors, "black");
+    }
+  }
+}
+
 /*------------------------------------*\
   #COMMON-BP
 \*------------------------------------*/
 
 @mixin common-bp($point) {
-
-	@media #{map-get($common-media-queries, $point)}{
-		@content;
-	}
+  @media #{map-get($common-media-queries, $point)} {
+    @content;
+  }
 }

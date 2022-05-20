@@ -4,10 +4,10 @@
   @include anchor;
 
   svg {
-    fill: map-get($colors, "white");
+    fill: map-get($colors, "black");
 
     path {
-      fill: map-get($colors, "white");
+      fill: map-get($colors, "black");
     }
   }
 }
